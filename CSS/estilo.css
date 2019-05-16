@@ -1,1 +1,10 @@
+body{
+  background-color: red;
+}
 
+h1{
+  font-family: 'Maiden Orange', cursive;
+}
+p{
+  font-family: 'PT Sans', sans-serif;
+}

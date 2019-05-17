@@ -13,14 +13,35 @@
 
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav ml-auto  ul-header">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+
+        <!--HOME-->
+
+        <li class="nav-item
+        <?php if ($filename=="Home") {
+            active;
+        } ?> ">
+          <a class="nav-link" href="Home.php">Home
+            <span class="sr-only">(current) </span>
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Temporadas</a>
+
+        <!--NOSOTROS-->
+        <li class="nav-item
+        <?php if ($filename=="Nosotros") {
+            active;
+        } ?> ">
+          <a class="nav-link" href="Nosotros.php">Nosotros</a>
         </li>
-        <li class="nav-item">
+
+        <!--Reglas-->
+        <li class="nav-item
+        <?php if ($filename=="Reglas") {
+            active;
+        } ?> ">
+          <a class="nav-link" href="Reglas.php">Reglas</a>
         </li>
+
+        <!-- DROPDOWN QUE NO VAMOSA  USAR AHORA
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            Nosotros
@@ -31,20 +52,18 @@
                 <a class="dropdown-item" href="#">Reglas</a>
          </div>
        </li>
+     -->
        <!--LOGIN SINGUP-->
-       <li class="nav-item login">
-         <a class="nav-link login" href="#">Log In</a>
+       <li class="nav-item login
+       <?php if ($filename=="login") {
+           active;
+       } ?>">
+         <a class="nav-link login" href="login.php">Log in </a>
        </li>
        <li class="nav-item singup">
          <a class="nav-link signup" href="#">Sing Up</a>
        </li>
       </ul>
-
-    </ul>
-
-
-
-
       <span class="navbar-text"> </span>
     </div>
 

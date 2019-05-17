@@ -29,7 +29,11 @@
 .ul-header{
   background-color: grey;
 }
+/*login*/
 
+.main-login{
+  background-image: url("../../imagenes/boks.jpg");
+}
 /*Medium*/
 @media (min-width:768px){
 /*HEADER*/

@@ -7,17 +7,17 @@
     <meta charset="utf-8">
     <title></title>
 
-    <?php include("linkcss.php"); ?>
+    <?php include("Includes/linkcss.php"); ?>
 
   </head>
   <body>
 
-    <?php include("Header.php"); ?>
+    <?php include("Includes/Header.php"); ?>
 
     <h1>Escribe conmigo asdjfla</h1>
     <p>hola euge!</p>
 
 
-    <?php include("jquerys.php"); ?>
+    <?php include("Includes/jquerys.php"); ?>
   </body>
 </html>

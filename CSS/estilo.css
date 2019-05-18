@@ -32,7 +32,7 @@
 /*login*/
 
 .main-login{
-  background-image: url("../../imagenes/boks.jpg");
+  background-image: url(../imagenes/books.jpg);
 }
 /*Medium*/
 @media (min-width:768px){

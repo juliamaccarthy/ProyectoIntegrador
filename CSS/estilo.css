@@ -34,22 +34,47 @@
 .main-login{
   background-image: url(../imagenes/books.jpg);
 }
+
+/*reglas*/
+.pregsfreq{
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.pregsfreq article{
+  text-align: justify;
+}
+
+.pregsfreq h5 {
+  color: rgb(87, 197, 164);
+}
 /*Medium*/
 @media (min-width:768px){
 /*HEADER*/
-
+.header-navbar{
+width: 80%;
+height: 15vh;
+}
+/*reglas*/
+.pregsfreq{
+  width: 80%;
+  margin: auto;
 }
 
+.titulo-pregsfreq {
+  text-align: center;
+  color: rgb(87, 197, 164);
+}
 
 @media (min-width:1200px) {
 /*HEADER*/
 .header{
 height: 15vh;
 }
-.header-navbar{
-width: 80%;
-height: 15vh;
 }
+
+
 }
 
 /*DESKTOP*/

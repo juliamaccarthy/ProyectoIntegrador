@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header fixed-top">
   <nav class="navbar navbar-expand-lg navbar-light fixed-top header-navbar">
     <!-- LOGO -->
     <a class="navbar-brand" href="#">

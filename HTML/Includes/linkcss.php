@@ -26,6 +26,15 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
+    <!-- como se escribe en el css
+      font-family: 'Roboto Slab', serif;
+      font-family: 'Montserrat', sans-serif;
+      -->
+<!-- Shadows Into Light font-->
+<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<!-- como se escribe en el css
+  ffont-family: 'Shadows Into Light', cursive;
+  -->
 
     <!-- NUESTRO CSS -->
     <link rel="stylesheet" href="../CSS/estilo.css">

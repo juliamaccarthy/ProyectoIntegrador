@@ -30,6 +30,100 @@
 .ul-header{
   background-color: grey;
 }
+/*HOME - Banner*/
+
+.img-fondo{
+  width: 100vw;
+}
+.subtitulo-banner{
+  width: 100%;
+  align-items: center;
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  font-size: 2em;
+  align-content: center;
+  text-align: center;
+}
+
+.botones-sing{
+  list-style: none;
+  width: 100%;
+  align-items: center;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  list-style: none;
+  margin: 0;
+
+}
+.botones-sing ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.botones-sing ul li {
+  list-style: none;
+  text-align: center;
+}
+.ingresar-home{
+  color: white;
+  background-color: rgb(87, 197, 164);
+  font-size: 2em;
+  padding: 15px;
+  display: inline-block;
+}
+
+/*HOME - Information*/
+.info-home {
+  overflow: hidden;
+
+}
+.img-escritor {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  float: right;
+}
+
+.info-title {
+  color: rgb(87, 197, 164);
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.info-subtitulo{
+  color: grey;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.botonos-info{
+  list-style: none;
+  width: 100%;
+  align-items: left;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  list-style: none;
+  margin: 0;
+
+}
+.botonos-info ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.botonos-info ul li {
+  list-style: none;
+  text-align: left;
+}
+
+.nosotros-info{
+  color: white;
+  background-color: rgb(87, 197, 164);
+  font-size: 2em;
+  padding: 15px;
+  display: inline-block;
+}
+
 /*login*/
 
 .main-login{
@@ -50,6 +144,7 @@
 .pregsfreq h5 {
   color: rgb(87, 197, 164);
 }
+
 /*Medium*/
 @media (min-width:768px){
 /*HEADER*/

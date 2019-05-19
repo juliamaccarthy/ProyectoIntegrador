@@ -4,6 +4,7 @@
 .header{
   height: 10vh;
   background-color: grey;
+
 }
 .header-navbar{
   width: 100%;
@@ -52,6 +53,10 @@
 /*Medium*/
 @media (min-width:768px){
 /*HEADER*/
+.header{
+height: 15vh;
+}
+
 .header-navbar{
 width: 80%;
 height: 15vh;
@@ -62,6 +67,10 @@ height: 15vh;
   margin: auto;
 }
 
+.preguntasfrecuentes{
+  margin-top: 20vh;
+}
+
 .titulo-pregsfreq {
   text-align: center;
   color: rgb(87, 197, 164);
@@ -69,10 +78,6 @@ height: 15vh;
 
 @media (min-width:1200px) {
 /*HEADER*/
-.header{
-height: 15vh;
-}
-}
 
 
 }

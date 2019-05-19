@@ -11,11 +11,6 @@
   <body class= preguntasfrecuentes>
     <?php include("Includes/Header.php") ?>
     <div class="pregsfreq">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
 
       <h3 class=titulo-pregsfreq> Preguntas Frecuentes </h3>
       <br>

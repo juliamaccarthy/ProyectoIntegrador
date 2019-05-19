@@ -38,7 +38,7 @@
         <?php if ($filename=="Reglas") {
             active;
         } ?> ">
-          <a class="nav-link" href="Reglas.php">Reglas</a>
+          <a class="nav-link" href="Reglas.php">Preguntas Frecuentes</a>
         </li>
 
         <!-- DROPDOWN QUE NO VAMOSA  USAR AHORA
@@ -58,10 +58,7 @@
        <?php if ($filename=="login") {
            active;
        } ?>">
-         <a class="nav-link login" href="login.php">Log in </a>
-       </li>
-       <li class="nav-item singup">
-         <a class="nav-link signup" href="#">Sing Up</a>
+         <a class="nav-link login" href="login.php">Ingresar</a>
        </li>
       </ul>
       <span class="navbar-text"> </span>

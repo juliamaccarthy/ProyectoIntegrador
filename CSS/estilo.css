@@ -15,7 +15,6 @@
   background-color: transparent;
   display: flex;
   color: white;
-
 }
 
 
@@ -175,7 +174,59 @@
 .pregsfreq h5 {
   color: rgb(87, 197, 164);
 }
+/*Nosotros*/
 
+.nosotros-main{
+  width: 90%;
+  margin: auto;
+}
+.nosotros-h1{
+  color: rgb(87, 197, 164);
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nosotros-h2{
+  color: rgb(87, 197, 164);
+  font-size: 1.75em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+/*footer*/
+.footer-gnrl{
+  background-color: rgb(87, 197, 164);
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.nosotros-p{
+  text-align: justify;
+}
+.footer{
+  width: 80%;
+  margin:auto;
+  align-items: center;
+  align-content: center;
+}
+.footer-brand{
+  display: inline-block;
+  float: left;
+}
+
+.connect {
+  display: inline-block;
+  float: right;
+  padding-top: 12px;
+}
+i {
+  color: white;
+  font-size: 25px;
+  margin-left: 10px;
+}
 /*Medium*/
 @media (min-width:768px){
 /*HEADER*/
@@ -227,6 +278,17 @@ color: rgb(87, 197, 164);
   color: rgb(87, 197, 164);
   text-align: center;
 }
+/*Nosotros*/
+
+.nosotros-main{
+  width: 80%;
+  margin: auto;
+}
+/*footer*/
+.footer-gnrl{
+  height: 10vh;
+}
+
 
 @media (min-width:1200px) {
 /*HEADER*/

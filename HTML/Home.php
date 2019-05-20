@@ -73,5 +73,6 @@
     </div>
   </div>
 </section>
+    <<?php include("Includes/Footer.php") ?>
     <?php include("Includes/jquerys.php"); ?>
   </body>

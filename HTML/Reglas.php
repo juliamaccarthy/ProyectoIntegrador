@@ -67,7 +67,7 @@
       </article>
 
     </div>
-
+<<?php include("Includes/Footer.php") ?>
 <?php include("Includes/jquerys.php") ?>
 </body>
 </html>

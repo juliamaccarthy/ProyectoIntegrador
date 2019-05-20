@@ -5,11 +5,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <?php include("Includes/linkcss.php") ?>
+    <?php include("Includes/linkcss.php"); ?>
     <title></title>
   </head>
   <body class="nosotros-body">
-    <?php include("Includes/Header.php") ?>
+    <?php include("Includes/Header.php"); ?>
 
     <main class="nosotros-main">
       <h1 class="nosotros-h1">Nosotros</h1>
@@ -36,7 +36,7 @@
     </main>
 
 
-    <<?php include("Includes/Footer.php") ?>
-    <?php include("Includes/jquerys.php") ?>
+    <?php include("Includes/Footer.php"); ?>
+    <?php include("Includes/jquerys.php");?>
   </body>
 </html>

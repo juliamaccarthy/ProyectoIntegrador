@@ -105,6 +105,19 @@
   font-size: 2em;
   padding: 15px;
   display: inline-block;
+  border-style: solid;
+  border-color: rgb(87, 197, 164);
+  border-width: 3px;
+}
+
+.ingresar-home:hover{
+  border-style: solid;
+  border-color: rgb(87, 197, 164);
+  border-width: 3px;
+  color: rgb(87, 197, 164);
+  background-color:white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /*HOME - Nosotros*/
@@ -116,20 +129,47 @@
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   float: right;
+  width: 50%;
 }
 
-.home-nostitle {
+.HomeReglas {
+  overflow: hidden;
+}
+.homeNosotros-escrito-nosotros{
+  width: 50%;
+  padding: 20px;
+  padding-bottom: 0px;
+  float: left;
+}
+.img-dosescriben {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  float: left;
+  width: 50%;
+}
+
+
+
+.homeNosotros-escrito-reglas{
+  width: 50%;
+  padding: 20px;
+  padding-bottom: 0px;
+  float: right;
+}
+
+.home-title {
   color: rgb(87, 197, 164);
   font-family: 'Shadows Into Light', cursive;
   font-size: 3em
 }
 
-.home-infonos-subtitle {
+.home-subtitle {
   color: grey;
     font-family: 'Montserrat', sans-serif;
+    text-align: justify;
 }
 
-.home-botoninfo-nos{
+.home-botoninfo{
   list-style: none;
   width: 100%;
   align-items: left;
@@ -140,22 +180,35 @@
   margin: 0;
 }
 
-.home-botoninfo-nos ul{
+.home-botoninfo ul{
   margin-left: 0;
   padding-left: 0;
 }
 
-.home-botoninfo-nos ul li {
+.home-botoninfo ul li {
   list-style: none;
   text-align: left;
 }
 
-.home-nosboton {
+.home-boton {
   color: white;
   background-color: rgb(87, 197, 164);
   font-size: 2em;
   padding: 15px;
   display: inline-block;
+  border-style: solid;
+  border-color: rgb(87, 197, 164);
+  border-width: 3px;
+}
+
+.home-boton:hover{
+  border-style: solid;
+  border-color: rgb(87, 197, 164);
+  border-width: 3px;
+  color: rgb(87, 197, 164);
+  background-color:white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /*login*/
@@ -206,8 +259,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  position: relative;
-  bottom: 0px;
 }
 .nosotros-p{
   text-align: justify;

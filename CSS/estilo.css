@@ -52,6 +52,9 @@
   background-color: white;
   color:rgb(87, 197, 164);
   font-weight: bold;
+  border: solid;
+  border-color:white;
+  border-width: 3px;
 }
 }
 .login:hover{

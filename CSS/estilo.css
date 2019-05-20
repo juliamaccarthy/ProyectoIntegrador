@@ -202,6 +202,8 @@
   width: 100%;
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 0px;
 }
 .nosotros-p{
   text-align: justify;

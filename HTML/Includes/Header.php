@@ -1,10 +1,12 @@
 <header class="header">
-  <nav class="navbar navbar-expand-lg navbar-light header-navbar">
+  <nav class="navbar navbar-expand-lg header-navbar">
     <!-- LOGO -->
-    <a class="navbar-brand" href="#">
-      <img src="../imagenes/Logo.png" width="30" height="30" class="d-inline-block align-top img-header-logo" alt="">
+    <div class="navbar-div" href="#">
+      <img src="../imagenes/logoescribir.png" width="50" height="50" class="d-inline-block align-top img-header-logo" alt="">
+    <a class="navbar-brand" href="Home.php">
       Escribe Conmigo
     </a>
+  </div>
 
 
     <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +56,7 @@
        </li>
      -->
        <!--LOGIN SINGUP-->
-       <li class="nav-item login
+       <li class="nav-item
        <?php if ($filename=="login") {
            active;
        } ?>">

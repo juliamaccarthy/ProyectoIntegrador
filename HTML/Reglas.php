@@ -8,7 +8,7 @@
     <?php include("Includes/linkcss.php") ?>
     <title></title>
   </head>
-  <body class= preguntasfrecuentes>
+  <body >
     <?php include("Includes/Header.php") ?>
     <div class="pregsfreq">
 

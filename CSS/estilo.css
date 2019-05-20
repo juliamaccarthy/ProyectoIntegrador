@@ -3,33 +3,65 @@
 /*HEADER*/
 .header{
   height: 10vh;
-  background-color: grey;
+  background-color: rgb(87, 197, 164);
+  align-items: center;
+  vertical-align: middle;
 
 }
 .header-navbar{
   width: 100%;
-  height: 10vh;
+  height: 100%;
   margin: auto;
   background-color: transparent;
+  display: flex;
+  color: white;
+
 }
+
+
 
 .navbar-brand{
   font-size: 20px;
-  width: 30%;
+  padding-top: 10px;
+  color: white;
+  font-weight: bold;
+  pointer-events:none;
 }
 .img-header-logo{
   margin-right: 10px;
 }
+
 .nav-link{
-  font-size: 15PX;
+  font-size: 17PX;
   text-align: center;
   border-width: thin;
   border-color: black;
+  color: white;
+  margin-left: 20px;
+
+}
+
+.nav-link:hover{
+  color: white;
+  border-bottom: solid;
+  border-color: white;
+  border-width: 3px;
+}
+
+.login {
+  background-color: white;
+  color:rgb(87, 197, 164);
+  font-weight: bold;
 }
 }
-.ul-header{
-  background-color: grey;
+.login:hover{
+  background-color: rgb(87, 197, 164);
+  border: solid;
+  border-color: white;
+  border-width: 3px;
+  color: white;
 }
+
 /*HOME - Banner*/
 .img-fondo{
   width: 100vw;
@@ -145,18 +177,16 @@
 @media (min-width:768px){
 /*HEADER*/
 .header{
-height: 15vh;
+height: 10vh;
 }
 
 .header-navbar{
 width: 80%;
-height: 15vh;
 }
 
 /*reglas*/
 .pregsfreq{
   width: 80%;
-  margin: auto;
 }
 
 .preguntasfrecuentes{

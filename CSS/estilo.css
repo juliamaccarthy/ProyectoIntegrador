@@ -176,6 +176,10 @@
 }
 /*Nosotros*/
 
+.nosotros-body{
+  height: 100vh;
+}
+
 .nosotros-main{
   width: 90%;
   margin: auto;
@@ -202,7 +206,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: relative;
   bottom: 0px;
 }
 .nosotros-p{

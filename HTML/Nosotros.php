@@ -8,7 +8,7 @@
     <?php include("Includes/linkcss.php") ?>
     <title></title>
   </head>
-  <body>
+  <body class="nosotros-body">
     <?php include("Includes/Header.php") ?>
 
     <main class="nosotros-main">

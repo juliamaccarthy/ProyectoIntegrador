@@ -5,8 +5,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include("Includes/linkcss.php"); ?>
-    <title></title>
+
+    <title>Escibe conmigo | Nosotros</title>
   </head>
   <body class="nosotros-body">
     <?php include("Includes/Header.php"); ?>

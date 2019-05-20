@@ -10,6 +10,7 @@
   <head>
     <meta charset="utf-8">
     <title>Escibe conmigo | LOG IN </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include("Includes/linkcss.php"); ?>
 
   </head>
@@ -44,7 +45,7 @@
       </form>
     </main>
     </div>
-      
+
       <?php include("Includes/jquerys.php"); ?>
 
   </body>

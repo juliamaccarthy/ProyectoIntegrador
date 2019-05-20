@@ -130,13 +130,14 @@
   filter: grayscale(100%);
   float: right;
   width: 50%;
+  display: none;
 }
 
 .HomeReglas {
   overflow: hidden;
 }
 .homeNosotros-escrito-nosotros{
-  width: 50%;
+  width: 100%;
   padding: 20px;
   padding-bottom: 0px;
   float: left;
@@ -146,12 +147,13 @@
   filter: grayscale(100%);
   float: left;
   width: 50%;
+  display: none;
 }
 
 
 
 .homeNosotros-escrito-reglas{
-  width: 50%;
+  width: 100%;
   padding: 20px;
   padding-bottom: 0px;
   float: right;
@@ -293,6 +295,30 @@ height: 10vh;
 
 .header-navbar{
 width: 80%;
+}
+/*home*/
+.homeNosotros-escrito-reglas{
+  width: 50%;
+}
+.img-escritor {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  float: right;
+  width: 50%;
+  display: block;
+}
+.homeNosotros-escrito-nosotros{
+  width: 50%;
+  padding: 20px;
+  padding-bottom: 0px;
+  float: left;
+}
+.img-dosescriben {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  float: left;
+  width: 50%;
+  display: block;
 }
 
 /*reglas*/

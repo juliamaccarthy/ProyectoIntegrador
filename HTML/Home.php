@@ -34,25 +34,44 @@
         </section>
 <br>
 
-<!-- Reglas : Cambiar nombre de las class desde Div class="texto-info"-->
-<section class="Reglas-home">
+<!--Home-Nosotros-->
+<section class="Home-Nosotros">
   <div class="row">
-  <div class="col-sm-12 col-lg-12 reglas-home">
-    <img class="img-dosescriben" src="../ImagenesDH/escribeconmigo.jpeg" alt="escritores">
-    <div class="texto-info">
-    <h3 class="info-title"> ESCRIBE CONMIGO </h3>
-    <p class="info-subtitulo">Comunidad de escritores para quienes el arte de escribir se contruye a través de la disciplina, la expesión sin  censura y la retroalimentación positiva. En donde la diversidad de los miembros abre mentes, y a veces crea mundos. </p>
-    <div class="botonos-info">
+
+  <div class="col-sm-12 col-lg-12 HomeNosotros">
+    <img class="img-escritor" src="../ImagenesDH/escritor.jpeg" alt="escritor">
+    <p class="home-nostitle"> ESCRIBE CONMIGO </p>
+    <p class="home-infonos-subtitle">Comunidad de escritores para quienes el arte de escribir se contruye a través de la disciplina, la expesión sin  censura y la retroalimentación positiva. En donde la diversidad de los miembros abre mentes, y a veces crea mundos. </p>
+    <div class="home-botoninfo-nos">
       <ul>
         <li>
-          <a class="nosotros-info" href="#">Nosotros</a>
+          <a class="home-nosboton" href="#">Nosotros</a>
         </li>
       </ul>
-    </div>
     </div>
   </div>
 </div>
 </section>
+
+
+<!-- Home - Reglas-->
+<section class="Home-reglas">
+  <div class="row">
+    <div class="col-sm-12 col-lg-12 HomeReglas">
+      <img class="img-dosescriben" src="../ImagenesDH/escribeconmigo.jpg" alt="escritores">
+        <div class="home-inforeglas">
+        <p class="home-inforeglas-title"> ESCRIBE CONMIGO </p>
+          <p class="home-inforeglas-subtitulo">Comunidad de escritores para quienes el arte de escribir se contruye a través de la disciplina, la expesión sin  censura y la retroalimentación positiva. En donde la diversidad de los miembros abre mentes, y a veces crea mundos. </p>
+        <div class="home-botoninfo-reglas">
+          <ul>
+            <li>
+              <a class="home-reglasboton" href="#">Reglas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <?php include("Includes/jquerys.php"); ?>
   </body>
-</html>

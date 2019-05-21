@@ -171,13 +171,13 @@
   float: right;
 }
 
-.home-titlenos {
+.home-title {
   color: rgb(87, 197, 164);
   font-family: 'Shadows Into Light', cursive;
   font-size: 3em
 }
 
-.home-subnos {
+.home-subtitle {
   color: grey;
     font-family: 'Montserrat', sans-serif;
     text-align: justify;

@@ -7,6 +7,24 @@
 @media (min-width:320px){
 
 /*HEADER*/
+.navbar-dark .navbar-nav .nav-link{
+ color: white;
+}
+
+li.nav-item a.login{
+  border: 3px solid white;
+}
+
+li.nav-item a.login:hover{
+  color: rgb(87, 197, 164) !important;
+  background-color: white;
+}
+
+.navbar-collapse{
+  background-color: rgb(87, 197, 164) !important;
+  z-index: 9999;
+}
+
 .header{
   height: 10vh;
   background-color: rgb(87, 197, 164);
@@ -24,11 +42,10 @@
 }
 
 
-
 .navbar-brand{
   font-size: 20px;
   padding-top: 10px;
-  color: white;
+  color: white !important;
   font-weight: bold;
   pointer-events:none;
 }
@@ -37,13 +54,13 @@
 }
 
 .nav-link{
-  font-size: 17PX;
+  font-size: 17px;
   text-align: center;
-  border-width: thin;
+  /*border-width: thin;
   border-color: black;
   color: white;
   margin-left: 20px;
-
+*/
 }
 
 .nav-link:hover{
@@ -51,20 +68,26 @@
   border-bottom: solid;
   border-color: white;
   border-width: 3px;
+  text-decoration: none;
 }
 
-.login {
+.navbar-dark .navbar-nav .nav-link .login {
   background-color: white;
   color:rgb(87, 197, 164);
   font-weight: bold;
-  border: solid;
-  border-color:white;
+  border: 3px solid white;
   border-width: 3px;
 }
-}
-.login:hover{
+
+.navbar-dark .navbar-nav .nav-link .login:hover{
   background-color: rgb(87, 197, 164);
   border: solid;
+  border-color: white;
+  border-width: 3px;
+  color: white;
+}
+.active{
+  border-bottom: solid;
   border-color: white;
   border-width: 3px;
   color: white;
@@ -79,17 +102,16 @@
   width: 100%;
   align-items: center;
   display: inline-block;
-  position: absolute;
-  top: 50%;
+
   margin: 0;
 }
 .subtitulo-banner{
   width: 100%;
   align-items: center;
   display: inline-block;
-
+  font-size: 1em;
+  position: absolute;
   top: 25%;
-  font-size: 2em;
   align-content: center;
   text-align: center;
 }
@@ -117,7 +139,7 @@
   color: white;
   background-color: rgb(87, 197, 164);
   font-size: 1em;
-  padding: 15px;
+  padding: 3px;
   display: inline-block;
   border-style: solid;
   border-color: rgb(87, 197, 164);
@@ -152,9 +174,12 @@
 }
 .homeNosotros-escrito-nosotros{
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   padding-bottom: 0px;
   float: left;
+  border-bottom: solid;
+  border-width: 3px;
+  border-color: rgba(87, 197, 164,0.6);
 }
 .img-dosescriben {
   -webkit-filter: grayscale(100%);
@@ -169,6 +194,7 @@
   padding: 20px;
   padding-bottom: 0px;
   float: right;
+
 }
 
 .home-title {
@@ -180,6 +206,7 @@
 .home-subtitle {
   color: grey;
     font-family: 'Montserrat', sans-serif;
+    display: block;
     text-align: justify;
 }
 
@@ -187,9 +214,7 @@
   list-style: none;
   width: 100%;
   align-items: left;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
+  display: block;
   list-style: none;
   margin: 0;
 }
@@ -207,8 +232,8 @@
 .home-boton {
   color: white;
   background-color: rgb(87, 197, 164);
-  font-size: 2em;
-  padding: 15px;
+  font-size: 1.5em;
+  padding: 10px;
   display: inline-block;
   border-style: solid;
   border-color: rgb(87, 197, 164);
@@ -298,6 +323,7 @@ i {
   font-size: 25px;
   margin-left: 10px;
 }
+}
 /*Medium*/
 @media (min-width:768px){
 /*HEADER*/
@@ -309,6 +335,152 @@ height: 10vh;
 width: 80%;
 }
 /*home*/
+/*home copy*/
+/*HOME - Banner*/
+.img-fondo{
+  width: 100vw;
+}
+
+.banner-sub{
+  width: 100%;
+  align-items: center;
+  display: inline-block;
+
+  margin: 0;
+}
+.subtitulo-banner{
+  width: 100%;
+  align-items: center;
+  display: inline-block;
+  font-size: 2em;
+  position: absolute;
+  top: 30%;
+  align-content: center;
+  text-align: center;
+}
+
+.botones-sing{
+  list-style: none;
+  width: 100%;
+  align-items: center;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  list-style: none;
+  margin: 0;
+}
+.botones-sing ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.botones-sing ul li {
+  list-style: none;
+  text-align: center;
+}
+
+
+.ingresar-home {
+  color: white;
+  width: 25%;
+  background-color: rgb(87, 197, 164);
+  font-size: 2em;
+  padding: 15px;
+  display: inline-block;
+  border-style: solid;
+  border-color: rgb(87, 197, 164);
+  border-width: 3px;
+}
+
+.ingresar-home:hover{
+  border-style: solid;
+  border-color: rgb(87, 197, 164);
+  border-width: 3px;
+  color: rgb(87, 197, 164);
+  background-color:white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*HOME - Nosotros*/
+.HomeNosotros {
+  overflow: hidden;
+}
+
+.HomeReglas {
+  overflow: hidden;
+}
+.homeNosotros-escrito-nosotros{
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 0px;
+  float: left;
+}
+
+.homeNosotros-escrito-reglas{
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 0px;
+  float: right;
+}
+
+.home-title {
+  color: rgb(87, 197, 164);
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3em
+}
+
+.home-subtitle {
+  color: grey;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+
+.home-botoninfo{
+  list-style: none;
+  width: 100%;
+  align-items: left;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  list-style: none;
+  margin: 0;
+}
+
+.home-botoninfo ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.home-botoninfo ul li {
+  list-style: none;
+  text-align: left;
+}
+
+.home-boton {
+  color: white;
+  background-color: rgb(87, 197, 164);
+  font-size: 2em;
+  padding: 15px;
+  display: inline-block;
+  border-style: solid;
+  border-color: rgb(87, 197, 164);
+  border-width: 3px;
+}
+
+.home-boton:hover{
+  border-style: solid;
+  border-color: rgb(87, 197, 164);
+  border-width: 3px;
+  color: rgb(87, 197, 164);
+  background-color:white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+/*home copy final*/
+
 .homeNosotros-escrito-reglas{
   width: 50%;
 }
@@ -347,12 +519,77 @@ width: 80%;
   text-align: center;
 }
 
-.signup-registro{
-  margin-top: 20vh;
-  color: rgb(87, 197, 164);
+/*LOGIN*/
+
+.paginasignup{
+  width: 100%;
+  height: 80vh;
   text-align: center;
-  border-style: solid;
 }
+
+.quote{
+  width: 50%;
+  margin-top: 10vh;
+  height: 90%;
+  padding-top: 10vh;
+  float: left;
+  border-right: solid;
+  border-color: rgb(87, 197, 164);
+  border-width: 4px;
+  color: rgb(87, 197, 164);
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-family:   'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
+
+  align-items: center;
+  vertical-align: middle;
+
+
+}
+
+.p-quote{
+  width: 60%;
+  margin-left: 20%;
+  margin: auto;
+}
+
+.main-signup{
+  width: 50%;
+  height: 90%;
+  padding-top: 20vh;
+  float: right;
+}
+
+.signup-form {
+  width: 70%;
+  margin: auto;
+}
+
+.signup-login ul {
+  list-style: none;
+  padding:0px;
+  margin:0px;
+  overflow: hidden;
+  margin-left: 15%;
+
+}
+.signup-login ul li {
+  list-style: none;
+  float: left;
+  width: 35%
+}
+.pregunta-signup{
+  margin-top: 5px;
+}
+.pregunta-signup label {
+  width: 30%;
+  text-align: left;
+}
+.pregunta-signup input {
+  width: 60%;
+}
+
 
 .enviar-login{
     background-color: rgb(87, 197, 164);
@@ -360,12 +597,6 @@ width: 80%;
 
 .cancelar-login{
 color: rgb(87, 197, 164);
-}
-
-.main-signup {
-  margin-top: 20vh;
-  color: rgb(87, 197, 164);
-  text-align: center;
 }
 
 .main-login {

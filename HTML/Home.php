@@ -24,13 +24,14 @@
             <img class="img-fondo" src="../ImagenesDH/cuentanostuhistoria.jpg" alt="banner">
             <div class="banner-sub">
             <p class="subtitulo-banner">Vivir. Escribir. Imaginar. Contar. Drenar. <br> Aprender. Motivar. Sanar. </p>
-            </div>
+
             <div class="botones-sing">
               <ul>
                 <li>
                   <a class="ingresar-home" href="login.php">Ingresá</a>
                 </li>
               </ul>
+            </div>
             </div>
             </div>
           </div>

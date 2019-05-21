@@ -1,9 +1,9 @@
 <header class="header">
-  <nav class="navbar navbar-expand-lg header-navbar">
+  <nav class="navbar navbar-expand-lg header-navbar navbar-dark" style="background-color: rgb(87, 197, 164)";>
     <!-- LOGO -->
     <div class="navbar-div" href="#">
       <img src="../imagenes/logoescribir.png" width="50" height="50" class="d-inline-block align-top img-header-logo" alt="">
-    <a class="navbar-brand" href="Home.php">
+    <a class="navbar-brand"  href="Home.php">
       Escribe Conmigo
     </a>
   </div>
@@ -13,7 +13,7 @@
     <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarText">
+    <div class="collapse navbar-collapse div-col" id="navbarText">
       <ul class="navbar-nav ml-auto  ul-header">
 
         <!--HOME-->

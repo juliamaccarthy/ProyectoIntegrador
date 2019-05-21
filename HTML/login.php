@@ -13,47 +13,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escibe conmigo | LOG IN </title>
     <?php include("Includes/linkcss.php"); ?>
-
   </head>
   <body>
     <?php include("Includes/Header.php"); ?>
 
     <div class="paginasignup">
+      <div class="quote">
+        <p class="p-quote">
+          <?=$quote?>
+        </p>
+      </div>
 
-    <main class="main-signup">
-      <form class="signup-registro" action="login.php" method="POST">
-        <br>
-        <h5 class="crearnuevacuenta"> Crear nueva cuenta </h5>
-        <br>
+      <main class="main-signup">
+        <form class="signup-form" action="login.php" method="POST">
 
-        <label for="nombre">Nombre *</label>
-        <input id="nombre" type="text" name="" placeholder="Miguel">
-        <br>
+          <h5 class="crearnuevacuenta"> Crear nueva cuenta </h5>
+          
+          <div class="signup-login">
+            <ul>
+              <li>
+                <a href="login.php">Sign Up</a>
+              </li>
+              <li>
+                <a href="signup.php">Log In</a>
+              </li>
+            </ul>
 
-        <label for="apellido">Apellido *</label>
-        <input id="apellido" type="text" name="" placeholder="Sanchez">
-        <br>
+          </div>
 
-        <label for="email">E-mail *</label>
-        <input id="email" type="email" name="" placeholder="usuario@email.com">
-        <br>
+          <div class="pregunta-signup">
+            <label for="nombre">Nombre *</label>
+            <input id="nombre" type="text" name="" placeholder="Miguel">
+          </div>
 
-        <label for="usuario">Usuario *</label>
-        <input id="usuario" type="text" name="" placeholder="Miguel Sanchez">
-        <br>
+          <div class="pregunta-signup">
+            <label for="apellido">Apellido *</label>
+            <input id="apellido" type="text" name="" placeholder="Sanchez">
+          </div>
 
-        <label for="contrasenia">Contraseña *</label>
-        <input id="contrasenia" type="password" name="" placeholder="******">
-        <br>
-        <br>
+          <div class="pregunta-signup">
+            <label for="email">E-mail *</label>
+            <input id="email" type="email" name="" placeholder="usuario@email.com">
+          </div>
 
-        <p>
-          <label for="Registrarse"></label>
-          <button type="submit" value="Registrarse" action="signup.php">Registrarse</button>
+          <div class="pregunta-signup">
+            <label for="usuario">Usuario *</label>
+            <input id="usuario" type="text" name="" placeholder="Miguel Sanchez">
+          </div>
 
-        <p>
-          <label for="Cancelar"></label>
-          <input class="cancelar-login" type="submit" name="" value="Cancelar" action="signup.php">
+          <div class="pregunta-signup">
+            <label for="contrasenia">Contraseña *</label>
+            <input id="contrasenia" type="password" name="" placeholder="******">
+          </div>
+
+          <div class="pregunta-signup">
+            <label for="Registrarse"></label>
+            <button type="submit" value="Registrarse" action="signup.php">Registrarse</button>
+          </div>
+
+          <div class="pregunta-signup">
+            <label for="Cancelar"></label>
+            <input class="cancelar-login" type="submit" name="" value="Cancelar" action="signup.php">
+          </div>
       </form>
     </main>
     </div>

@@ -22,7 +22,9 @@
 
           <div class="col-sm-12 col-lg-12 img-principal photo-container">
             <img class="img-fondo" src="../ImagenesDH/cuentanostuhistoria.jpg" alt="banner">
+            <div class="banner-sub">
             <p class="subtitulo-banner">Vivir. Escribir. Imaginar. Contar. Drenar. <br> Aprender. Motivar. Sanar. </p>
+            </div>
             <div class="botones-sing">
               <ul>
                 <li>
@@ -63,7 +65,7 @@
       <img class="img-dosescriben" src="../ImagenesDH/escribeconmigo.jpg" alt="escritores">
         <div class="homeNosotros-escrito-reglas">
         <p class="home-title"> ESCRIBE CONMIGO </p>
-          <p class="home-subtitulo">Comunidad de escritores para quienes el arte de escribir se contruye a través de la disciplina, la expesión sin  censura y la retroalimentación positiva. En donde la diversidad de los miembros abre mentes, y a veces crea mundos. </p>
+          <p class="home-subtitle">Comunidad de escritores para quienes el arte de escribir se contruye a través de la disciplina, la expesión sin  censura y la retroalimentación positiva. En donde la diversidad de los miembros abre mentes, y a veces crea mundos. </p>
         <div class="home-botoninfo">
           <ul>
             <li>

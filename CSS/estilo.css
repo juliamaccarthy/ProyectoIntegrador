@@ -5,6 +5,7 @@
 
 /*MOBILE*/
 @media (min-width:320px){
+
 /*HEADER*/
 .header{
   height: 10vh;
@@ -73,11 +74,20 @@
 .img-fondo{
   width: 100vw;
 }
-.subtitulo-banner{
+
+.banner-sub{
   width: 100%;
   align-items: center;
   display: inline-block;
   position: absolute;
+  top: 50%;
+  margin: 0;
+}
+.subtitulo-banner{
+  width: 100%;
+  align-items: center;
+  display: inline-block;
+
   top: 25%;
   font-size: 2em;
   align-content: center;
@@ -93,7 +103,6 @@
   top: 50%;
   list-style: none;
   margin: 0;
-
 }
 .botones-sing ul{
   margin-left: 0;
@@ -104,10 +113,10 @@
   list-style: none;
   text-align: center;
 }
-.ingresar-home{
+.ingresar-home {
   color: white;
   background-color: rgb(87, 197, 164);
-  font-size: 2em;
+  font-size: 1em;
   padding: 15px;
   display: inline-block;
   border-style: solid;
@@ -155,8 +164,6 @@
   display: none;
 }
 
-
-
 .homeNosotros-escrito-reglas{
   width: 100%;
   padding: 20px;
@@ -164,13 +171,13 @@
   float: right;
 }
 
-.home-title {
+.home-titlenos {
   color: rgb(87, 197, 164);
   font-family: 'Shadows Into Light', cursive;
   font-size: 3em
 }
 
-.home-subtitle {
+.home-subnos {
   color: grey;
     font-family: 'Montserrat', sans-serif;
     text-align: justify;

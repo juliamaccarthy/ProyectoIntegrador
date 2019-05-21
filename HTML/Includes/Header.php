@@ -18,29 +18,26 @@
 
         <!--HOME-->
 
-        <li class="nav-item
-        <?php if ($filename=="Home") {
-            active;
-        } ?> ">
-          <a class="nav-link" href="Home.php">Home
+        <li class="nav-item">
+          <a class="nav-link <?php if ($filename=="Home") {
+              echo 'active';
+          } ?> " href="Home.php">Home
             <span class="sr-only">(current) </span>
           </a>
         </li>
 
         <!--NOSOTROS-->
-        <li class="nav-item
-        <?php if ($filename=="Nosotros") {
-            active;
-        } ?> ">
-          <a class="nav-link" href="Nosotros.php">Nosotros</a>
+        <li class="nav-item ">
+          <a class="nav-link <?php if ($filename=="Nosotros") {
+              echo 'active';
+          } ?>" href="Nosotros.php">Nosotros</a>
         </li>
 
         <!--Reglas-->
-        <li class="nav-item
-        <?php if ($filename=="Reglas") {
-            active;
-        } ?> ">
-          <a class="nav-link" href="Reglas.php">Preguntas Frecuentes</a>
+        <li class="nav-item">
+          <a class="nav-link <?php if ($filename=="Reglas") {
+              echo 'active';
+          } ?> " href="Reglas.php">Preguntas Frecuentes</a>
         </li>
 
         <!-- DROPDOWN QUE NO VAMOSA  USAR AHORA
@@ -56,11 +53,10 @@
        </li>
      -->
        <!--LOGIN SINGUP-->
-       <li class="nav-item
-       <?php if ($filename=="login") {
-           active;
-       } ?>">
-         <a class="nav-link login" href="login.php">Ingresar</a>
+       <li class="nav-item">
+         <a class="nav-link login <?php if ($filename=="login") {
+             echo 'active';
+         } ?>" href="login.php">Ingresar</a>
        </li>
       </ul>
       <span class="navbar-text"> </span>

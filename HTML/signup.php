@@ -1,46 +1,81 @@
 <!DOCTYPE html>
 <?php
-  $filename="login";
+  $filename="signup";
 
   $bookquote=["'We are all storytellers.  We all live in a network of stories. There isn´t a stronger connection between people than sotrytelling.'","'Storytelling is the most powerful way to put ideas into the world today '","'Facts tell, stories sell'","'when you stand and share your sotry ina empowering way, your sotry will heal you and your story will heal sombody else '","'Stories can conquer fear, you know, they can make the hear bigger'","'A short story is a diffrent thing all togheter - a short story is like a kiss in the dark from a stranger.'","'what are we but our stories '","'Great stories happen to those who can tell them '","'Stories of imagination tend to upset those without one '","'the universe is made of stories not of atoms'","'you can always edita a bad page.  You can´t edit a blank page.'","'Every secret of a writer´s soul, every experience of his life, every qulity of his mind, is written large in his works.'",];
   $quote=$bookquote[rand(0, (count($bookquote)-1))];
+
 
  ?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Escibe conmigo | LOG IN </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escibe conmigo | SIGN UP </title>
     <?php include("Includes/linkcss.php"); ?>
-
   </head>
   <body>
     <?php include("Includes/Header.php"); ?>
 
-    <div class="pagina-login">
+    <div class="paginasignup">
+      <div class="quote">
+        <p class="p-quote">
+          <?=$quote?>
+        </p>
+      </div>
 
-    <main class="main-login">
-      <form class="login-usuario" action="signup.php" method="POST">
-        <br>
-        <h5 class="IngresarALibros"> Ingresar </h5>
-        <br>
+      <main class="main-signup">
+        <form class="signup-form" action="login.php" method="POST">
 
-        <label for="email">E-mail *</label>
-        <input id="email" type="email" name="" placeholder="usuario@email.com">
-        <br>
+          <h5 class="h5-log"> Crear nueva cuenta </h5>
 
-        <label for="contrasenia">Contraseña *</label>
-        <input id="contrasenia" type="password" name="" placeholder="******">
-        <br>
-        <br>
+          <div class="signup-login">
+            <ul>
+              <li class="signup-si">
+                <a href="signup.php" class="<?php if ($filename=="signup") {
+                    echo 'active-sign';
+                }?>">Sign Up</a>
+              </li>
 
-        <p>
-          <label for="Entrar"></label>
-          <input class="entrar-signup" type="submit" name="" value="Entrar">
+              <li>
+                <a href="login.php" class="
+                <?php if ($filename=="login") {
+                    echo 'active-sign';
+                }?>
+                ">Log In</a>
+              </li>
+            </ul>
 
-        <p>
-            <label for="Crear-Cuenta"></label>
-            <input class="Crear-Cuenta" type="submit" name="" value="Crear Cuenta" action="login.php">
+          </div>
+
+          <div class="pregunta-signup">
+            <label for="nombre">Nombre *</label>
+            <input id="nombre" type="text" name="" placeholder="Miguel">
+          </div>
+
+          <div class="pregunta-signup">
+            <label for="apellido">Apellido *</label>
+            <input id="apellido" type="text" name="" placeholder="Sanchez">
+          </div>
+
+          <div class="pregunta-signup">
+            <label for="email">E-mail *</label>
+            <input id="email" type="email" name="" placeholder="usuario@email.com">
+          </div>
+
+          <div class="pregunta-signup">
+            <label for="usuario">Usuario *</label>
+            <input id="usuario" type="text" name="" placeholder="Miguel Sanchez">
+          </div>
+
+          <div class="pregunta-signup">
+            <label for="contrasenia">Contraseña *</label>
+            <input id="contrasenia" type="password" name="" placeholder="******">
+          </div>
+
+          <div class="pregun-regis">
+            <button class="registrarse" type="submit" value="Registrarse" action="signup.php">Registrarse</button>
+          </div>
 
       </form>
     </main>

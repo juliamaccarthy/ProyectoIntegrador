@@ -54,9 +54,9 @@
      -->
        <!--LOGIN SINGUP-->
        <li class="nav-item">
-         <a class="nav-link login <?php if ($filename=="login") {
+         <a class="nav-link login <?php if ($filename=="login" && $filename=="signup" ) {
              echo 'active';
-         } ?>" href="login.php">Ingresar</a>
+         } ?>" href="signup.php">Ingresar</a>
        </li>
       </ul>
       <span class="navbar-text"> </span>

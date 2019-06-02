@@ -8,6 +8,7 @@
 
 
   if ($_POST){
+<<<<<<< HEAD
     $errores=error();
     if(count($errores)== 0){
       $avatar = armarAvatar($_FILES);
@@ -17,6 +18,9 @@
       exit;
 
     }
+=======
+    $errores=error($_POST,"registro");
+>>>>>>> b847a785339fa794d75e81ea674f2ed4aeac917b
   }
 
  ?>
@@ -115,6 +119,7 @@
           <div class="pregunta-signup imagen">
             <input type="file" name="imagen" value="" >
             <p class="error-for">
+            <?=(isset($errores['imagen'])?  $errores['imagen']: "");?>
             </p>
           </div>
 

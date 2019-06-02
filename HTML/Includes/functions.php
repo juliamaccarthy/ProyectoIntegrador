@@ -64,16 +64,17 @@ function error($datos, $bandera){
       $errores['verificaContrasenia']='Las contraseñas no coinciden';
     }
 
-    if (isset($_FILES) $$  ) {
-      // code...
-    }
-
+    if(isset($_FILES) && $bandera == 'registro'){
+       if($_FILES["imagen"]["error"]!=0){
+           $errores["imagen"]="No recibi la imagen";
+       }
+       $imagen = $_FILES["imagen"]["name"];
+       $ext = pathinfo($imagen,PATHINFO_EXTENSION);
+       if($ext != "jpg" && $ext != "png"){
+           $errores["imagen"] = "Querido escritor la extensión debe ser PNG o JPG";
+       }
 
     return $errores;
-/* NO GUARDAMOS LAS CONTRASE;AS */
-
-
-
 
 }
 

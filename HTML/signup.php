@@ -8,7 +8,7 @@
 
 
   if ($_POST){
-    $errores=error($_POST);
+    $errores=error($_POST,"registro");
   }
 
  ?>
@@ -107,6 +107,7 @@
           <div class="pregunta-signup imagen">
             <input type="file" name="imagen" value="" >
             <p class="error-for">
+            <?=(isset($errores['imagen'])?  $errores['imagen']: "");?>
             </p>
           </div>
 

@@ -1,54 +1,71 @@
 <?php
 session_start();
 
-function error(){
+function error($datos, $bandera){
     $errores=[];
 
 /*ERROR DEL NOMBRE*/
-    if (!isset($_POST['nombre']) || strlen($_POST['nombre']) == 0){
+    if (!isset($datos['nombre']) || strlen($datos['nombre']) == 0){
       $errores['nombre']='Falta completar el nombre';
 // SI NO HAY ERROR --> GUARDAR EL NOMBRE//
     } else {
-      $_SESSION['nombre']=$_POST['nombre'];
+      $nombre=trim($datos['nombre']);
     }
 
 /*ERROR APELLIDO*/
-    if (!isset($_POST['apellido']) || (strlen($_POST['apellido'])==0)){
+    if (!isset($datos['apellido']) || (strlen($datos['apellido'])==0)){
       $errores['apellido']='Falta completar el apellido';
 // SI NO HAY ERROR --> GUARDAR EL apellido//
     } else {
-      $_SESSION['apellido']=$_POST['apellido'];
+      $apellido=trim($datos['apellido']);
     }
 
 /* ERROR EMAIL INCOMPLETO*/
-    if (!isset($_POST['email']) || (strlen($_POST['email'])==0)){
+    if (!isset($datos['email']) || (strlen($datos['email'])==0)){
       $errores['email']='Falta completar el mail';
 /* ERROR MAIL FORMATO INCOMPLETO*/
-    } elseif (filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)==false) {
+    } elseif (filter_var($datos['email'],FILTER_VALIDATE_EMAIL)==false) {
       $errores['email']='El formato de email no es valido';
 // SI NO HAY ERROR --> GUARDAR EL mail//
     } else {
-      $_SESSION['email']=$_POST['email'];
+      $email['email']=trim($datos['email']);
     }
 
 /*ERROR DEL USUARIO*/
-    if (!isset($_POST['usuario']) || strlen($_POST['usuario'])==0){
+    if (!isset($datos['usuario']) || strlen($datos['usuario'])==0){
       $errores['usuario']='Falta completar el usuario';
 // SI NO HAY ERROR --> GUARDAR EL USUARIO//
     } else {
-      $_SESSION['usuario']=$_POST['usuario'];
+      $usuario=trim($datos['usuario']);
     }
 
 /*ERROR DE CONTRASENIA*/
-    if (!isset($_POST['contrasenia']) || strlen($_POST['contrasenia'])==0){
+    $password = $datos['contrasenia'];
+      // Validate password strength
+    $uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $number    = preg_match('@[0-9]@', $password);
+    $specialChars = preg_match('@[^\w]@', $password);
+
+    if (!isset($datos['contrasenia']) || strlen($datos['contrasenia'])==0){
       $errores['contrasenia']='Falta completar la contraseña';
+    } elseif (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8){
+      $errores['contrasenia']='La contraseña debe tener al menos 8 caracteres, incluir al menos una mayúscula, un número y un caracter especial (!#$%&)';
+    }else{
+      $password = trim($datos['contrasenia']);
     }
 
+
+    $repassword=trim($datos['verificaContrasenia']);
 /*ERROR DE CONTRASENIA*/
-    if (!isset($_POST['verificaContrasenia']) || strlen($_POST['verificaContrasenia'])==0){
+    if (!isset($datos['verificaContrasenia']) || strlen($datos['verificaContrasenia'])==0){
       $errores['verificaContrasenia']='Falta completar la verificación de la contraseña';
-    } elseif ($_POST['verificaContrasenia']!=$_POST['contrasenia']) {
+    } elseif ($password!=$repassword) {
       $errores['verificaContrasenia']='Las contraseñas no coinciden';
+    }
+
+    if (isset($_FILES) $$  ) {
+      // code...
     }
 
 
@@ -59,8 +76,6 @@ function error(){
 
 
 }
-
-
 
 function armarAvatar($imagen){
     $nombre = $imagen["avatar"]["name"];

@@ -9,6 +9,14 @@
 
   if ($_POST){
     $errores=error();
+    if(count($errores)== 0){
+      $avatar = armarAvatar($_FILES);
+      $usuario = armarUsuario($_POST,$avatar);
+      guardarUsuario($usuario);
+      header("location: login.php");
+      exit;
+
+    }
   }
 
  ?>

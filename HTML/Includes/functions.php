@@ -1,8 +1,8 @@
 <?php
+session_start();
 
 function error(){
-  $errores=[];
-  session_start();
+    $errores=[];
 
 /*ERROR DEL NOMBRE*/
     if (!isset($_POST['nombre']) || strlen($_POST['nombre']) == 0){
@@ -51,11 +51,12 @@ function error(){
       $errores['verificaContrasenia']='Las contraseñas no coinciden';
     }
 
+
+    return $errores;
 /* NO GUARDAMOS LAS CONTRASE;AS */
 
-  var_dump($_POST);
-  var_dump($errores);
-  var_dump($_SESSION);
+
+
 
 }
 

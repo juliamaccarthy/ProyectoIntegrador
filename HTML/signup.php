@@ -6,11 +6,10 @@
 
   include("Includes/functions.php");
 
-  $errores=[];
-  if ($_POST){
-    error();
-  }
 
+  if ($_POST){
+    $errores=error();
+  }
 
  ?>
  <!DOCTYPE html>
@@ -58,7 +57,7 @@
 
           <div class="pregunta-signup">
             <label for="nombre">Nombre *</label>
-            <input id="nombre" type="text" name="nombre" placeholder="Miguel" >
+            <input id="nombre" type="text" name="nombre" placeholder="Miguel" value="<?=(isset($_SESSION['nombre'])?$_SESSION['nombre']: "");?>" >
             <p class="error-for">
             <?=(isset($errores['nombre'])?$errores['nombre']: "");?>
             </p>
@@ -66,7 +65,7 @@
 
           <div class="pregunta-signup">
             <label for="apellido">Apellido *</label>
-            <input id="apellido" type="text" name="apellido" placeholder="Sanchez">
+            <input id="apellido" type="text" name="apellido" placeholder="Sanchez" value="<?=(isset($_SESSION['apellido'])?$_SESSION['apellido']: "");?>">
             <p class="error-for">
             <?=(isset($errores['apellido'])?$errores['apellido']: "");?>
             </p>
@@ -74,13 +73,13 @@
 
           <div class="pregunta-signup">
             <label for="email">E-mail *</label>
-            <input id="email" type="email" name="email" placeholder="usuario@email.com">
+            <input id="email" type="email" name="email" placeholder="usuario@email.com" value="<?=(isset($_SESSION['email'])?$_SESSION['email']: "");?>">
             <?=(isset($errores['email'])?$errores['email']: "");?>
           </div>
 
           <div class="pregunta-signup">
             <label for="usuario">Usuario *</label>
-            <input id="usuario" type="text" name="usuario" placeholder="Miguel Sanchez">
+            <input id="usuario" type="text" name="usuario" placeholder="Miguel Sanchez" value="<?=(isset($_SESSION['usuario'])?$_SESSION['usuario']: "");?>">
             <p class="error-for">
             <?=(isset($errores['usuario'])?$errores['usuario']: "");?>
             </p>

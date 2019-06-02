@@ -5,7 +5,13 @@
   $bookquote=["'We are all storytellers.  We all live in a network of stories. There isn´t a stronger connection between people than sotrytelling.'","'Storytelling is the most powerful way to put ideas into the world today '","'Facts tell, stories sell'","'when you stand and share your sotry ina empowering way, your sotry will heal you and your story will heal sombody else '","'Stories can conquer fear, you know, they can make the hear bigger'","'A short story is a diffrent thing all togheter - a short story is like a kiss in the dark from a stranger.'","'what are we but our stories '","'Great stories happen to those who can tell them '","'Stories of imagination tend to upset those without one '","'the universe is made of stories not of atoms'","'you can always edita a bad page.  You can´t edit a blank page.'","'Every secret of a writer´s soul, every experience of his life, every qulity of his mind, is written large in his works.'",];
   $quote=$bookquote[rand(0, (count($bookquote)-1))];
 
-  var_dump($_POST);
+
+  include("Includes/functions.php");
+
+
+  if ($_POST){
+    $errores=error($_POST);
+  }
 
 
  ?>
@@ -52,12 +58,28 @@
 
           <div class="pregunta-signup">
             <label for="email">E-mail *</label>
-            <input id="email" type="email" name="" placeholder="usuario@email.com">
+            <input id="email" type="text" name="email" placeholder="usuario@email.com" value="<?=(isset($_SESSION['email'])?$_SESSION['email']: "");?>">
+            <p class="error-for">
+            <?=(isset($errores['email'])?$errores['email']: "");?>
+            </p>
           </div>
 
           <div class="pregunta-signup">
             <label for="contrasenia">Contraseña *</label>
-            <input id="contrasenia" type="password" name="" placeholder="******">
+            <input id="contrasenia" type="password" name="contrasenia" placeholder="******">
+            <p class="error-for">
+            <?=(isset($errores['contrasenia'])?$errores['contrasenia']: "");?>
+            </p>
+          </div>
+
+          <div class="pregunta-signup">
+
+            <input id="recordarme" type="checkbox" name="recordar" value="recordar"/>
+            <label> Recuerdame</label>
+          </div>
+
+          <div class="pregun-regis olvidarcont">
+            <a class="registrarse" href="login.php"> No me acuerdo la contraseña</a>
           </div>
 
           <div class="pregun-regis">

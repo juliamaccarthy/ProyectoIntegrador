@@ -40,7 +40,7 @@
 
       <main class="main-signup">
 
-        <form class="signup-form" action="signup.php" method="post" enctype="application/x-www-form-urlencoded" >
+        <form class="signup-form" action="signup.php" method="post" enctype="multipart/form-data" >
 
           <h5 class="h5-log"> CREAR CUENTA NUEVA </h5>
 
@@ -81,8 +81,10 @@
 
           <div class="pregunta-signup">
             <label for="email">E-mail *</label>
-            <input id="email" type="email" name="email" placeholder="usuario@email.com" value="<?=(isset($_SESSION['email'])?$_SESSION['email']: "");?>">
+            <input id="email" type="text" name="email" placeholder="usuario@email.com" value="<?=(isset($_SESSION['email'])?$_SESSION['email']: "");?>">
+            <p class="error-for">
             <?=(isset($errores['email'])?$errores['email']: "");?>
+            </p>
           </div>
 
           <div class="pregunta-signup">
@@ -109,9 +111,18 @@
             </p>
           </div>
 
+
+          <div class="pregunta-signup imagen">
+            <input type="file" name="imagen" value="" >
+            <p class="error-for">
+            </p>
+          </div>
+
           <div class="pregun-regis">
             <button class="registrarse" type="submit" value="signup" action="signup.php">Registrar</button>
           </div>
+
+
 
       </form>
     </main>

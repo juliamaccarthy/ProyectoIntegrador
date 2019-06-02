@@ -74,7 +74,9 @@
           <div class="pregunta-signup">
             <label for="email">E-mail *</label>
             <input id="email" type="email" name="email" placeholder="usuario@email.com" value="<?=(isset($_SESSION['email'])?$_SESSION['email']: "");?>">
+            <p class="error-for">
             <?=(isset($errores['email'])?$errores['email']: "");?>
+            </p>
           </div>
 
           <div class="pregunta-signup">

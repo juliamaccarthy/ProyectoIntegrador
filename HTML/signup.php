@@ -8,19 +8,15 @@
 
 
   if ($_POST){
-<<<<<<< HEAD
-    $errores=error();
+    $errores=error($_POST, 'registro');
     if(count($errores)== 0){
-      $avatar = armarAvatar($_FILES);
-      $usuario = armarUsuario($_POST,$avatar);
+      $imagen = armarEscritor($_FILES);
+      $usuario = armarUsuario($_POST,$imagen);
       guardarUsuario($usuario);
       header("location: login.php");
       exit;
 
     }
-=======
-    $errores=error($_POST,"registro");
->>>>>>> b847a785339fa794d75e81ea674f2ed4aeac917b
   }
 
  ?>

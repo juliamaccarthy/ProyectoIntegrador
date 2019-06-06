@@ -79,26 +79,26 @@ function error($datos, $bandera){
 
 }
 
-function armarAvatar($imagen){
-    $nombre = $imagen["avatar"]["name"];
+function armarEscritor($imagen){
+    $nombre = $imagen["imagen"]["name"];
     $ext = pathinfo($nombre,PATHINFO_EXTENSION);
-    $archivoOrigen = $imagen["avatar"]["tmp_name"];
+    $archivoOrigen = $imagen["imagen"]["tmp_name"];
     $archivoDestino = dirname(__DIR__);
-    $archivoDestino = $archivoDestino."/fotosPerfil/";
-    $avatar = uniqid();
-    $archivoDestino = $archivoDestino.$avatar;
+    $archivoDestino = $archivoDestino."/imagenesEscritores/";
+    $imagen = uniqid();
+    $archivoDestino = $archivoDestino.$imagen;
     $archivoDestino = $archivoDestino.".".$ext;
     move_uploaded_file($archivoOrigen,$archivoDestino);
-    $avatar = $avatar.".".$ext;
-    return $avatar;
+    $imagen = $imagen.".".$ext;
+    return $imagen;
 }
 
-function armarUsuario($datos,$avatar){
+function armarUsuario($datos,$imagen){
     $usuario = [
         "nombre"=>$datos["nombre"],
         "email"=>$datos["email"],
         "password"=>password_hash($datos["password"],PASSWORD_DEFAULT),
-        "avatar"=>$avatar,
+        "escritor"=>$imagen,
         "perfil"=>1
     ];
     return $usuario;
@@ -137,7 +137,7 @@ function seteoUsuario($usuario,$datos){
 
     $_SESSION["nombre"] = $usuario["nombre"];
     $_SESSION["email"]=$usuario["email"];
-    $_SESSION["avatar"]=$usuario["avatar"];
+    $_SESSION["escritor"]=$usuario["escritor"];
     $_SESSION["perfil"]=$usuario["perfil"];
     if(isset($datos["recordar"])){
         setcookie("email",$datos["email"],time()+3600);

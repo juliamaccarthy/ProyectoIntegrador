@@ -3,13 +3,14 @@ session_start();
 
 function error($datos, $bandera){
     $errores=[];
+    $persist=[];
 
 /*ERROR DEL NOMBRE*/
     if (!isset($datos['nombre']) || strlen($datos['nombre']) == 0){
       $errores['nombre']='Falta completar el nombre';
 // SI NO HAY ERROR --> GUARDAR EL NOMBRE//
     } else {
-      $nombre=trim($datos['nombre']);
+      $persist['nombre']=trim($datos['nombre']);
     }
 
 /*ERROR APELLIDO*/
@@ -17,7 +18,7 @@ function error($datos, $bandera){
       $errores['apellido']='Falta completar el apellido';
 // SI NO HAY ERROR --> GUARDAR EL apellido//
     } else {
-      $apellido=trim($datos['apellido']);
+      $persist['apellido']=trim($datos['apellido']);
     }
 
 /* ERROR EMAIL INCOMPLETO*/
@@ -28,7 +29,7 @@ function error($datos, $bandera){
       $errores['email']='El formato de email no es valido';
 // SI NO HAY ERROR --> GUARDAR EL mail//
     } else {
-      $email['email']=trim($datos['email']);
+      $persist['email']=trim($datos['email']);
     }
 
 /*ERROR DEL USUARIO*/
@@ -36,7 +37,7 @@ function error($datos, $bandera){
       $errores['usuario']='Falta completar el usuario';
 // SI NO HAY ERROR --> GUARDAR EL USUARIO//
     } else {
-      $usuario=trim($datos['usuario']);
+      $persist['usuario']=trim($datos['usuario']);
     }
 
 /*ERROR DE CONTRASENIA*/
@@ -52,7 +53,7 @@ function error($datos, $bandera){
     } elseif (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8){
       $errores['contrasenia']='La contraseña debe tener al menos 8 caracteres, incluir al menos una mayúscula, un número y un caracter especial (!#$%&)';
     }else{
-      $password = trim($datos['contrasenia']);
+      $persist['password'] = trim($datos['contrasenia']);
     }
 
 

@@ -8,11 +8,36 @@
 
   include("Includes/functions.php");
 
-
   if ($_POST){
-    $errores=error($_POST);
-  }
+    $validar=validar($_POST, 'login');
+    $errores=$validar['errores'];
+    $persist=$validar['persist'];
 
+    if(count($errores) == 0){
+
+      $usuario = buscarPorEmail($_POST["email"]);
+
+      if($usuario == null){
+        $errores["verification"]= "Usuario / Contraseña invalidos";
+      }else{
+        if(password_verify($_POST["contrasenia"],$usuario["contrasenia"])==false){
+          $errores["verification"]="Usuario / Contraseña invalidos";
+        }else {
+
+          seteoUsuario($usuario,$_POST);
+          if(validarAcceso()){
+            header("location: usuarios.php");
+            exit;
+          }else{
+            header("location: login.php");
+            exit;
+          }
+
+        }
+      }
+
+      }
+  }
 
  ?>
 <html lang="en" dir="ltr">
@@ -58,7 +83,7 @@
 
           <div class="pregunta-signup">
             <label for="email">E-mail *</label>
-            <input id="email" type="text" name="email" placeholder="usuario@email.com" value="<?=(isset($_SESSION['email'])?$_SESSION['email']: "");?>">
+            <input id="email" type="text" name="email" placeholder="usuario@email.com" value="<?=(isset($persist['email'])?$persist['email']: "");?>">
             <p class="error-for">
             <?=(isset($errores['email'])?$errores['email']: "");?>
             </p>
@@ -72,11 +97,21 @@
             </p>
           </div>
 
+          <div class="pregunta-regis">
+            <p class="error-for">
+            <?=(isset($errores['verification'])?$errores['verification']: "");?>
+            </p>
+          </div>
+
           <div class="pregunta-signup">
+
+
 
             <input id="recordarme" type="checkbox" name="recordar" value="recordar"/>
             <label> Recuerdame</label>
           </div>
+
+
 
           <div class="pregun-regis olvidarcont">
             <a class="registrarse" href="login.php"> No me acuerdo la contraseña</a>

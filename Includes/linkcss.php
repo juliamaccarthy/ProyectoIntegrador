@@ -37,4 +37,4 @@
   -->
 
     <!-- NUESTRO CSS -->
-    <link rel="stylesheet" href="../CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/estilo.css">

@@ -6,17 +6,28 @@
 
   include("Includes/functions.php");
 
-
   if ($_POST){
-    $errores=error($_POST, 'registro');
+    $validar=validar($_POST, 'registro');
+    $errores=$validar['errores'];
+    $persist=$validar['persist'];
+
+    /*si el mail no tiene error pero buscar mail no da null osea que el mail se encuentra en el archivo json entonces el mail tiene error ya que esta registrado */
+
+    if (!isset($errores['email']) && buscarPorEmail($_POST['email'])!=null) {
+    $errores['email']='Este mail ya esta registrado';
+    }
+
     if(count($errores)== 0){
-      $imagen = armarEscritor($_FILES);
-      $usuario = armarUsuario($_POST,$imagen);
+
+      $escritor = armarEscritor($_FILES);
+      $usuario = armarUsuario($_POST,$escritor);
+
       guardarUsuario($usuario);
-      header("location: login.php");
+      header("location: usuarios.php");
       exit;
 
     }
+
   }
 
  ?>
@@ -65,7 +76,7 @@
 
           <div class="pregunta-signup">
             <label for="nombre">Nombre *</label>
-            <input id="nombre" type="text" name="nombre" placeholder="Miguel" value="<?=(isset($_SESSION['nombre'])?$_SESSION['nombre']: "");?>" >
+            <input id="nombre" type="text" name="nombre" placeholder="Miguel" value="<?=(isset($persist['nombre'])?$persist['nombre']: "");?>" >
             <p class="error-for">
             <?=(isset($errores['nombre'])?$errores['nombre']: "");?>
             </p>
@@ -73,7 +84,7 @@
 
           <div class="pregunta-signup">
             <label for="apellido">Apellido *</label>
-            <input id="apellido" type="text" name="apellido" placeholder="Sanchez" value="<?=(isset($_SESSION['apellido'])?$_SESSION['apellido']: "");?>">
+            <input id="apellido" type="text" name="apellido" placeholder="Sanchez" value="<?=(isset($persist['apellido'])?$persist['apellido']: "");?>">
             <p class="error-for">
             <?=(isset($errores['apellido'])?$errores['apellido']: "");?>
             </p>
@@ -81,7 +92,7 @@
 
           <div class="pregunta-signup">
             <label for="email">E-mail *</label>
-            <input id="email" type="text" name="email" placeholder="usuario@email.com" value="<?=(isset($_SESSION['email'])?$_SESSION['email']: "");?>">
+            <input id="email" type="text" name="email" placeholder="usuario@email.com" value="<?=(isset($persist['email'])?$persist['email']: "");?>">
             <p class="error-for">
             <?=(isset($errores['email'])?$errores['email']: "");?>
             </p>
@@ -89,7 +100,7 @@
 
           <div class="pregunta-signup">
             <label for="usuario">Usuario *</label>
-            <input id="usuario" type="text" name="usuario" placeholder="Miguel Sanchez" value="<?=(isset($_SESSION['usuario'])?$_SESSION['usuario']: "");?>">
+            <input id="usuario" type="text" name="usuario" placeholder="Miguel Sanchez" value="<?=(isset($persist['usuario'])?$persist['usuario']: "");?>">
             <p class="error-for">
             <?=(isset($errores['usuario'])?$errores['usuario']: "");?>
             </p>

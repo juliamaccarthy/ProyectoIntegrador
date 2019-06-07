@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg header-navbar navbar-dark" style="background-color: rgb(87, 197, 164)";>
     <!-- LOGO -->
     <div class="navbar-div" href="#">
-      <img src="../imagenes/logoescribir.png" width="50" height="50" class="d-inline-block align-top img-header-logo" alt="">
+      <img src="imagenes/logoescribir.png" width="50" height="50" class="d-inline-block align-top img-header-logo" alt="">
     <a class="navbar-brand"  href="Home.php">
       Escribe Conmigo
     </a>
@@ -21,7 +21,7 @@
         <li class="nav-item">
           <a class="nav-link <?php if ($filename=="Home") {
               echo 'active';
-          } ?> " href="Home.php">Home
+          } ?> " href="index.php">Home
             <span class="sr-only">(current) </span>
           </a>
         </li>

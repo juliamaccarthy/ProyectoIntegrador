@@ -1,10 +1,11 @@
 <?php
+
 session_start();
 
 function error($datos, $bandera){
-    $errores=[];
+    $errores = [];
 
-/*ERROR DEL NOMBRE*/
+/* ERROR DEL NOMBRE */
     if (!isset($datos['nombre']) || strlen($datos['nombre']) == 0){
       $errores['nombre']='Falta completar el nombre';
 // SI NO HAY ERROR --> GUARDAR EL NOMBRE//
@@ -57,7 +58,7 @@ function error($datos, $bandera){
 
 
     $repassword=trim($datos['verificaContrasenia']);
-/*ERROR DE CONTRASENIA*/
+    /*ERROR DE CONTRASENIA*/
     if (!isset($datos['verificaContrasenia']) || strlen($datos['verificaContrasenia'])==0){
       $errores['verificaContrasenia']='Falta completar la verificación de la contraseña';
     } elseif ($password!=$repassword) {
@@ -73,9 +74,9 @@ function error($datos, $bandera){
        if($ext != "jpg" && $ext != "png"){
            $errores["imagen"] = "Querido escritor la extensión debe ser PNG o JPG";
        }
+    }
 
     return $errores;
-
 }
 
 function armarEscritor($imagen){
@@ -148,12 +149,13 @@ function seteoUsuario($usuario,$datos){
 function validarAcceso(){
     if(isset($_SESSION["email"])){
         return true;
-    }elseif (isset($_COOKIE["email"])) {
+    } elseif (isset($_COOKIE["email"])) {
         $_SESSION["email"]= $_COOKIE["email"];
         $_SESSION["password"]=$_COOKIE["password"];
         return true;
-    }else{
+    } else{
         return false;
     }
 }
+
 ?>

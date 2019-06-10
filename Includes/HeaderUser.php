@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg header-navbar navbar-dark" style="background-color: rgb(87, 197, 164)";>
     <!-- LOGO -->
     <div class="navbar-div" href="#">
-      <img src="../imagenes/logoescribir.png" width="50" height="50" class="d-inline-block align-top img-header-logo" alt="">
+      <img src="imagenes/logoescribir.png" width="50" height="50" class="d-inline-block align-top img-header-logo" alt="">
     <a class="navbar-brand"  href="Home.php">
       Escribe Conmigo
     </a>
@@ -21,7 +21,7 @@
         <li class="nav-item">
           <a class="nav-link <?php if ($filename=="Home") {
               echo 'active';
-          } ?> " href="Home.php">Home
+          } ?> " href="#">News Feed
             <span class="sr-only">(current) </span>
           </a>
         </li>
@@ -30,14 +30,14 @@
         <li class="nav-item ">
           <a class="nav-link <?php if ($filename=="Nosotros") {
               echo 'active';
-          } ?>" href="Nosotros.php">Nosotros</a>
+          } ?>" href="#">Reglas</a>
         </li>
 
-        <!--Reglas-->
+        <!--Reglas--> <!--TODAVIA NO VA A NINGUN LADO-->
         <li class="nav-item">
           <a class="nav-link <?php if ($filename=="Reglas") {
               echo 'active';
-          } ?> " href="Reglas.php">Preguntas Frecuentes</a>
+          } ?> " href="#">Mis Escritos</a>
         </li>
 
         <!-- DROPDOWN QUE NO VAMOSA  USAR AHORA
@@ -56,7 +56,7 @@
        <li class="nav-item">
          <a class="nav-link login <?php if ($filename=="login" && $filename=="signup" ) {
              echo 'active';
-         } ?>" href="signup.php">Ingresar</a>
+         } ?>" href="logout.php">Log out</a>
        </li>
       </ul>
       <span class="navbar-text"> </span>

@@ -3,7 +3,7 @@
   <div class="footer">
     <div class="footer-brand">
 
-      <img src="../imagenes/logoescribir.png" width="50" height="50" class="d-inline-block align-top img-header-logo" alt="">
+      <img src="imagenes/logoescribir.png" width="50" height="50" class="d-inline-block align-top img-header-logo" alt="">
       <a class="navbar-brand" href="Home.php">
       Escribe Conmigo
       </a>

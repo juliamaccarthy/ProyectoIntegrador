@@ -1,32 +1,50 @@
+<!DOCTYPE html>
 <?php
-
-  $filename="signup";
+  $filename="login";
 
   $bookquote=["'We are all storytellers.  We all live in a network of stories. There isn´t a stronger connection between people than sotrytelling.'","'Storytelling is the most powerful way to put ideas into the world today '","'Facts tell, stories sell'","'when you stand and share your sotry ina empowering way, your sotry will heal you and your story will heal sombody else '","'Stories can conquer fear, you know, they can make the hear bigger'","'A short story is a diffrent thing all togheter - a short story is like a kiss in the dark from a stranger.'","'what are we but our stories '","'Great stories happen to those who can tell them '","'Stories of imagination tend to upset those without one '","'the universe is made of stories not of atoms'","'you can always edita a bad page.  You can´t edit a blank page.'","'Every secret of a writer´s soul, every experience of his life, every qulity of his mind, is written large in his works.'",];
   $quote=$bookquote[rand(0, (count($bookquote)-1))];
 
-  require_once("Includes/functions.php");
 
-  
+  include("Includes/functions.php");
 
   if ($_POST){
-    $errores=error($_POST, 'registro');
-    if(count($errores)== 0){
-      $imagen = armarEscritor($_FILES);
-      $usuario = armarUsuario($_POST,$imagen);
-      guardarUsuario($usuario);
-      header("location: login.php");
-      exit;
-    }
+    $validar=validar($_POST, 'login');
+    $errores=$validar['errores'];
+    $persist=$validar['persist'];
+
+    if(count($errores) == 0){
+
+      $usuario = buscarPorEmail($_POST["email"]);
+
+      if($usuario == null){
+        $errores["verification"]= "Usuario / Contraseña invalidos";
+      }else{
+        if(password_verify($_POST["contrasenia"],$usuario["contrasenia"])==false){
+          $errores["verification"]="Usuario / Contraseña invalidos";
+        }else {
+
+          seteoUsuario($usuario,$_POST);
+          if(validarAcceso()){
+            header("location: usuarios.php");
+            exit;
+          }else{
+            header("location: login.php");
+            exit;
+          }
+
+        }
+      }
+
+      }
   }
 
  ?>
- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escibe conmigo | SIGN UP </title>
+    <title>Escibe conmigo | LOG IN </title>
     <?php include("Includes/linkcss.php"); ?>
   </head>
   <body>
@@ -40,10 +58,9 @@
       </div>
 
       <main class="main-signup">
+        <form class="signup-form" action="login.php" method="POST">
 
-        <form class="signup-form" action="signup.php" method="post" enctype="multipart/form-data" >
-
-          <h5 class="h5-log"> CREAR CUENTA NUEVA </h5>
+          <h5 class="h5-log"> INGRESAR </h5>
 
           <div class="signup-login">
             <ul>
@@ -65,34 +82,10 @@
           </div>
 
           <div class="pregunta-signup">
-            <label for="nombre">Nombre *</label>
-            <input id="nombre" type="text" name="nombre" placeholder="Miguel" value="<?=(isset($_SESSION['nombre'])?$_SESSION['nombre']: "");?>" >
-            <p class="error-for">
-            <?=(isset($errores['nombre'])?$errores['nombre']: "");?>
-            </p>
-          </div>
-
-          <div class="pregunta-signup">
-            <label for="apellido">Apellido *</label>
-            <input id="apellido" type="text" name="apellido" placeholder="Sanchez" value="<?=(isset($_SESSION['apellido'])?$_SESSION['apellido']: "");?>">
-            <p class="error-for">
-            <?=(isset($errores['apellido'])?$errores['apellido']: "");?>
-            </p>
-          </div>
-
-          <div class="pregunta-signup">
             <label for="email">E-mail *</label>
-            <input id="email" type="text" name="email" placeholder="usuario@email.com" value="<?=(isset($_SESSION['email'])?$_SESSION['email']: "");?>">
+            <input id="email" type="text" name="email" placeholder="usuario@email.com" value="<?=(isset($persist['email'])?$persist['email']: "");?>">
             <p class="error-for">
             <?=(isset($errores['email'])?$errores['email']: "");?>
-            </p>
-          </div>
-
-          <div class="pregunta-signup">
-            <label for="usuario">Usuario *</label>
-            <input id="usuario" type="text" name="usuario" placeholder="Miguel Sanchez" value="<?=(isset($_SESSION['usuario'])?$_SESSION['usuario']: "");?>">
-            <p class="error-for">
-            <?=(isset($errores['usuario'])?$errores['usuario']: "");?>
             </p>
           </div>
 
@@ -104,27 +97,29 @@
             </p>
           </div>
 
-          <div class="pregunta-signup">
-            <label for="verificaContrasenia">Verificar Contraseña *</label>
-            <input id="verificaContrasenia" type="password" name="verificaContrasenia" placeholder="******">
+          <div class="pregunta-regis">
             <p class="error-for">
-            <?=(isset($errores['verificaContrasenia'])?  $errores['verificaContrasenia']: "");?>
+            <?=(isset($errores['verification'])?$errores['verification']: "");?>
             </p>
           </div>
 
+          <div class="pregunta-signup">
 
-          <div class="pregunta-signup imagen">
-            <input type="file" name="imagen" value="" >
-            <p class="error-for">
-            <?=(isset($errores['imagen'])?  $errores['imagen']: "");?>
-            </p>
+
+
+            <input id="recordarme" type="checkbox" name="recordar" value="recordar"/>
+            <label> Recuerdame</label>
+          </div>
+
+
+
+          <div class="pregun-regis olvidarcont">
+            <a class="registrarse" href="login.php"> No me acuerdo la contraseña</a>
           </div>
 
           <div class="pregun-regis">
-            <button class="registrarse" type="submit" value="signup" action="signup.php">Registrar</button>
+            <button class="registrarse" type="submit" value="login" action="login.php">Login</button>
           </div>
-
-
 
       </form>
     </main>

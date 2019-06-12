@@ -63,7 +63,7 @@
                 }?>">Sign Up</a>
               </li>
 
-              <li>
+              <li class="signup-lo">
                 <a href="login.php" class="
                 <?php if ($filename=="login") {
                     echo 'active-sign';
@@ -95,14 +95,6 @@
             <input id="email" type="text" name="email" placeholder="usuario@email.com" value="<?=(isset($persist['email'])?$persist['email']: "");?>">
             <p class="error-for">
             <?=(isset($errores['email'])?$errores['email']: "");?>
-            </p>
-          </div>
-
-          <div class="pregunta-signup">
-            <label for="usuario">Usuario *</label>
-            <input id="usuario" type="text" name="usuario" placeholder="Miguel Sanchez" value="<?=(isset($persist['usuario'])?$persist['usuario']: "");?>">
-            <p class="error-for">
-            <?=(isset($errores['usuario'])?$errores['usuario']: "");?>
             </p>
           </div>
 

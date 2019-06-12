@@ -3,6 +3,9 @@
   box-sizing: border-box;
 }
 
+p{
+  margin-bottom: 3px;
+}
 /*HEADER*/
 .navbar-dark .navbar-nav .nav-link{
  color: white;
@@ -365,17 +368,27 @@ i {
 .main-signup{
   width: 100%;
   height: 90%;
-  padding-top: 10vh;
 }
 .h5-log{
   color:rgb(87,197,164);
+  padding-top: 100px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.h5-login{
+  color:rgb(87,197,164);
+  padding-top: 210px;
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
 }
 .signup-form {
   width: 80%;
+  margin-top:10px;
   margin: auto;
+
 }
 
 .signup-login{
@@ -414,9 +427,10 @@ i {
 }
 
 .pregunta-signup{
-  margin-top: 5px;
+  margin-top: 0px;
   width: 100%;
 }
+
 .pregunta-signup label {
   width: 40%;
   text-align: left;
@@ -426,12 +440,15 @@ i {
   font-family: 'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
 
 }
+
 .pregunta-signup input {
   width: 60%;
 }
 
+
 .error-for{
-  width: 100%;
+  width: 60%;
+  display: inline-block;
   color: red;
   font-size: 10px;
   font-weight: bold;
@@ -449,16 +466,35 @@ i {
 
 }
 
+.pregunta-recor label {
+  width: 20%;
+  text-align: left;
+  color: rgb(87,197,164);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
+  box-sizing: border-box;
+
+}
+
+.recordarme{
+  width: 40%;
+  float:right;
+}
+
+
 .registrarse{
   text-align: center;
   color: rgb(87,197,164);
   font-size: 16px;
   font-weight: bold;
   font-family: 'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px;
 
 }
+
+
 
 @media (min-width:768px){
 /*HEADER*/
@@ -509,8 +545,8 @@ width: 80%;
 
 .main-signup{
   width: 50%;
-  height: 90%;
-  padding-top: 20vh;
+  height: 100%;
+  padding-top: 0vh;
   float: right;
 }
 .h5-log{
@@ -543,16 +579,18 @@ width: 80%;
   width: 50%;
 
 }
-.signup-login ul .signup-si {
+
+.signup-si {
   border-right: solid;
   border-width: 3px;
   border-color:rgb(87,197,164);
+  text-align: right;
+  padding-right: 20px;
 }
 
-
-.signup-login ul li a {
-  color: rgb(87,197,164);
-
+.signup-lo {
+  text-align: left;
+  padding-left: 20px;
 }
 
 .active-sign{
@@ -564,7 +602,7 @@ width: 80%;
   margin-top: 5px;
 }
 .pregunta-signup label {
-  width: 30%;
+  width: 60%;
   text-align: left;
   color: rgb(87,197,164);
   font-size: 16px;
@@ -677,6 +715,7 @@ width: 80%;
 
 
 @media (min-width:1200px) {
+
 /*HEADER*/
 /*home*/
 
@@ -782,7 +821,9 @@ width: 80%;
   width: 50%;
   display: block;
 }
-
+.main-signup{
+  padding-top: 0;
+}
 }
 
 /*DESKTOP*/

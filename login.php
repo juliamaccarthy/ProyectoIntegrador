@@ -60,7 +60,7 @@
       <main class="main-signup">
         <form class="signup-form" action="login.php" method="POST">
 
-          <h5 class="h5-log"> INGRESAR </h5>
+          <h5 class="h5-login"> INGRESAR </h5>
 
           <div class="signup-login">
             <ul>
@@ -70,7 +70,7 @@
                 }?>">Sign Up</a>
               </li>
 
-              <li>
+              <li class="signup-lo">
                 <a href="login.php" class="
                 <?php if ($filename=="login") {
                     echo 'active-sign';
@@ -103,12 +103,10 @@
             </p>
           </div>
 
-          <div class="pregunta-signup">
+          <div class="pregunta-recor">
+            <label for="recordarme"> Recuerdame </label>
+              <input class="recordarme" id="recordarme" type="checkbox" name="recordar" value="recordar"/>
 
-
-
-            <input id="recordarme" type="checkbox" name="recordar" value="recordar"/>
-            <label> Recuerdame</label>
           </div>
 
 

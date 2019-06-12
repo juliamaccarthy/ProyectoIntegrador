@@ -35,14 +35,6 @@ if ($bandera=='registro') {
       $persist['email']=trim($datos['email']);
     }
 
-/*ERROR DEL USUARIO*/
-    if (!isset($datos['usuario']) || strlen($datos['usuario'])==0){
-      $errores['usuario']='Falta completar el usuario';
-// SI NO HAY ERROR --> GUARDAR EL USUARIO//
-    } else {
-      $persist['usuario']=trim($datos['usuario']);
-    }
-
 /*ERROR DE CONTRASENIA*/
     $password = $datos['contrasenia'];
       // Validate password strength
@@ -126,8 +118,8 @@ function armarEscritor($imagen){
 function armarUsuario($datos,$avatar){
     $usuario = [
         "nombre"=>$datos["nombre"],
+        "apellido"=>$datos["apellido"],
         "email"=>$datos["email"],
-        "usuario"=>$datos["usuario"],
         "contrasenia"=>password_hash($datos["contrasenia"],PASSWORD_DEFAULT),
         "imagen"=>$avatar,
 /*TIPO DE PERMISOS, USARIOS O ADMINS */

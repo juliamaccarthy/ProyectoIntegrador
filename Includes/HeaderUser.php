@@ -3,9 +3,7 @@
     <!-- LOGO -->
     <div class="navbar-div" href="#">
       <img src="imagenes/logoescribir.png" width="50" height="50" class="d-inline-block align-top img-header-logo" alt="">
-    <a class="navbar-brand"  href="Home.php">
-      Escribe Conmigo
-    </a>
+    <a class="navbar-brand"  href="Home.php">Escribe Conmigo | <?=$_SESSION['nombre']?></a>
   </div>
 
 
@@ -19,25 +17,19 @@
         <!--HOME-->
 
         <li class="nav-item">
-          <a class="nav-link <?php if ($filename=="Home") {
-              echo 'active';
-          } ?> " href="#">News Feed
+          <a class="nav-link " href="#">News Feed
             <span class="sr-only">(current) </span>
           </a>
         </li>
 
         <!--NOSOTROS-->
         <li class="nav-item ">
-          <a class="nav-link <?php if ($filename=="Nosotros") {
-              echo 'active';
-          } ?>" href="#">Reglas</a>
+          <a class="nav-link" href="#">Reglas</a>
         </li>
 
         <!--Reglas--> <!--TODAVIA NO VA A NINGUN LADO-->
         <li class="nav-item">
-          <a class="nav-link <?php if ($filename=="Reglas") {
-              echo 'active';
-          } ?> " href="#">Mis Escritos</a>
+          <a class="nav-link" href="#">Mis Escritos</a>
         </li>
 
         <!-- DROPDOWN QUE NO VAMOSA  USAR AHORA
@@ -54,9 +46,7 @@
      -->
        <!--LOGIN SINGUP-->
        <li class="nav-item">
-         <a class="nav-link login <?php if ($filename=="login" && $filename=="signup" ) {
-             echo 'active';
-         } ?>" href="logout.php">Log out</a>
+         <a class="nav-link login" href="logout.php">Log out</a>
        </li>
       </ul>
       <span class="navbar-text"> </span>

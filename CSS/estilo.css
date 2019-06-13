@@ -102,18 +102,20 @@ li.nav-item a.login:hover{
   width: 100%;
   align-items: center;
   display: inline-block;
-
   margin: 0;
 }
 .subtitulo-banner{
   width: 100%;
   align-items: center;
   display: inline-block;
-  font-size: 1em;
   position: absolute;
   top: 25%;
   align-content: center;
   text-align: center;
+  font-family: courier-std, monospace;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5em;
 }
 
 .botones-sing{
@@ -144,6 +146,10 @@ li.nav-item a.login:hover{
   border-style: solid;
   border-color: rgb(87, 197, 164);
   border-width: 3px;
+  font-family: courier-std, monospace;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5em;
 }
 
 .ingresar-home:hover{
@@ -199,13 +205,18 @@ li.nav-item a.login:hover{
 
 .home-title {
   color: rgb(87, 197, 164);
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 3em
+  font-family: courier-std, monospace;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3em;
 }
 
 .home-subtitle {
   color: grey;
-    font-family: 'Montserrat', sans-serif;
+  font-family: courier-std, monospace;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5em;
     display: block;
     text-align: justify;
 }
@@ -238,6 +249,10 @@ li.nav-item a.login:hover{
   border-style: solid;
   border-color: rgb(87, 197, 164);
   border-width: 3px;
+  font-family: courier-std, monospace;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5em;
 }
 
 .home-boton:hover{
@@ -329,12 +344,14 @@ i {
   font-size: 25px;
   margin-left: 10px;
 }
+
 /*LOGIN*/
 
 .paginasignup{
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   text-align: center;
+
 }
 
 .quote{
@@ -351,7 +368,6 @@ i {
   letter-spacing: 3px;
   font-weight: bold;
   font-family:   'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
-
   align-items: center;
   vertical-align: middle;
 
@@ -362,16 +378,17 @@ i {
   width: 90%;
   margin: auto;
 
-
 }
 
 .main-signup{
   width: 100%;
   height: 90%;
+  margin-top: 50px;
 }
+
 .h5-log{
   color:rgb(87,197,164);
-  padding-top: 100px;
+  padding-top:10px;
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
@@ -379,16 +396,16 @@ i {
 
 .h5-login{
   color:rgb(87,197,164);
-  padding-top: 210px;
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
 }
+
 .signup-form {
   width: 80%;
-  margin-top:10px;
   margin: auto;
-
+  background-color: hsla(201, 15%, 18%, .15);
+  border-radius: 25px;
 }
 
 .signup-login{
@@ -491,12 +508,14 @@ i {
   font-family: 'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
   margin-top: 10px;
   padding: 10px;
+  padding-bottom: 10px;
 
 }
 
 
 
 @media (min-width:768px){
+
 /*HEADER*/
 .header{
 height: 10vh;
@@ -506,13 +525,15 @@ height: 10vh;
 width: 80%;
 }
 
-/*LOGIN*/
-
 .paginasignup{
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   text-align: center;
+  background-image: url("../ImagenesDH/fondo.jpeg") !important;;
+  background-size: cover;
 }
+
+/*LOGIN*/
 
 .quote{
   width: 50%;
@@ -530,23 +551,24 @@ width: 80%;
   letter-spacing: 3px;
   font-weight: bold;
   font-family:   'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
-
   align-items: center;
   vertical-align: middle;
-
-
 }
 
 .p-quote{
   width: 60%;
-  margin: auto;
-  margin-top: 10%;
+  margin-top:20vh;
+  padding: 20px;
+    background-color: hsla(201, 15%, 18%, .15);
+    border-radius: 25px;
+
 }
 
 .main-signup{
   width: 50%;
   height: 100%;
   padding-top: 0vh;
+  margin-top: 12vh;
   float: right;
 }
 .h5-log{
@@ -554,11 +576,14 @@ width: 80%;
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
-
+  padding-top: 20px;
 }
+
 .signup-form {
   width: 70%;
   margin: auto;
+  background-color: hsla(201, 15%, 18%, .15);
+  border-radius: 25px;
 }
 
 .signup-login{
@@ -631,9 +656,8 @@ width: 80%;
   font-size: 16px;
   font-weight: bold;
   font-family: 'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
-  margin-top: 20px;
   padding: 10px;
-
+  margin-bottom: 20px;
 }
 
 /*Home Banner*/
@@ -743,14 +767,19 @@ width: 80%;
 
 .home-title {
   color: rgb(87, 197, 164);
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 3em
+  font-family: courier-std, monospace;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 3em;
 }
 
 .home-subtitle {
   color: grey;
-    font-family: 'Montserrat', sans-serif;
-    text-align: justify;
+  font-family: courier-std, monospace;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5em;
+
 }
 
 .home-botoninfo{
@@ -783,6 +812,7 @@ width: 80%;
   border-style: solid;
   border-color: rgb(87, 197, 164);
   border-width: 3px;
+  margin-top: 20px;
 }
 
 .home-boton:hover{
@@ -821,6 +851,9 @@ width: 80%;
   width: 50%;
   display: block;
 }
+
+
+
 .main-signup{
   padding-top: 0;
 }

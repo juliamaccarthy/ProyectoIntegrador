@@ -36,5 +36,14 @@
   ffont-family: 'Shadows Into Light', cursive;
   -->
 
+<!-- Courier -->
+<link rel="stylesheet" href="https://use.typekit.net/xgs1qzq.css">
+<!-- como se escribe en el css
+font-family: courier-std, monospace;
+font-weight: 400;
+font-style: italic;
+-->
+
+
     <!-- NUESTRO CSS -->
     <link rel="stylesheet" href="CSS/estilo.css">

@@ -43,11 +43,11 @@
     <?php include("Includes/Header.php"); ?>
 
     <div class="paginasignup">
-      <div class="quote">
-        <p class="p-quote">
-          <?=$quote?>
-        </p>
-      </div>
+        <div class="quote">
+          <p class="p-quote">
+            <?=$quote?>
+          </p>
+        </div>
 
       <main class="main-signup">
 

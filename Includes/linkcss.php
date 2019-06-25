@@ -47,3 +47,5 @@ font-style: italic;
 
     <!-- NUESTRO CSS -->
     <link rel="stylesheet" href="CSS/estilo.css">
+
+    <link rel="shortcut icon" href="imagenes/LogoEscribirverde.png" />

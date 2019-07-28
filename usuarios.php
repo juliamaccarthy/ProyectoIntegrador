@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php include("Includes/functions.php");
-  if (buscarPorEmail($_SESSION["email"])==null) {
-    header("location:login.php");
+  if(!isset($_SESSION["email"])) {
+    redirect("signup.php");
+
   }
  ?>
 

@@ -11,8 +11,8 @@ class Autenticador{
     }
     static public function seteoSesion($user){
 
-        $_SESSION["name"]=$user["name"];
-        $_SESSION["email"] = $user["email"];
+        $_SESSION["name"]=ucwords(strtolower($user["name"]));
+        $_SESSION["email"] = strtolower($user["email"]);
         $_SESSION["role"]= $user["role"];
         $_SESSION["escritor"]= $user["escritor"];
     }

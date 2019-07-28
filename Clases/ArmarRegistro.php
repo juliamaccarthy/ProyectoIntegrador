@@ -1,28 +1,29 @@
 <?php
 class ArmarRegistro{
-    public function armarAvatar($imagen){
-        $nombre = $imagen["avatar"]["name"];
-        $ext = pathinfo($nombre,PATHINFO_EXTENSION);
-        $archivoOrigen = $imagen["avatar"]["tmp_name"];
+    public function armarEscritor($imagen){
+        $name = $imagen["escritor"]["name"];
+        $ext = pathinfo($name,PATHINFO_EXTENSION);
+        $archivoOrigen = $imagen["escritor"]["tmp_name"];
         $archivoDestino = dirname(__DIR__);
         $archivoDestino = $archivoDestino."/imagenes/";
-        $avatar = uniqid();
-        $archivoDestino = $archivoDestino.$avatar;
+        $escritor = uniqid();
+        $archivoDestino = $archivoDestino.$escritor;
         $archivoDestino = $archivoDestino.".".$ext;
 
         move_uploaded_file($archivoOrigen,$archivoDestino);
-        $avatar = $avatar.".".$ext;
+        $escritor = $escritor.".".$ext;
 
-        return $avatar;
+        return $escritor;
     }
 
-    public function armarUsuario($registro,$avatar){
+    public function armarUsuario($registro,$escritor){
 
         $usuario = [
-            "name"=>$registro->getNombre(),
+            "name"=>$registro->getName(),
+            "surname"=>$registro->getSurname(),
             "email"=>$registro->getEmail(),
             "password"=> Encriptar::hashPassword($registro->getPassword()),
-            "avatar"=>$avatar,
+            "escritor"=>$escritor,
             "role"=>1
         ];
 

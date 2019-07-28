@@ -6,40 +6,101 @@
   $quote=$bookquote[rand(0, (count($bookquote)-1))];
 
 
-  include("Includes/functions.php");
+//include("Includes/functions.php");
 
-  if ($_POST){
-    $validar=validar($_POST, 'login');
-    $errores=$validar['errores'];
-    $persist=$validar['persist'];
+  require_once("autoload.php");
+  if($_POST){
+    $tipoConexion = "MYSQL";
+    if($tipoConexion=="JSON"){
+        $usuario = new User($_POST["email"],$_POST["password"]);
+        $errores= $validar->validacionLogin($usuario);
+        if(count($errores)==0){
 
-    if(count($errores) == 0){
-
-      $usuario = buscarPorEmail($_POST["email"]);
-
-      if($usuario == null){
-        $errores["verification"]= "Usuario / Contraseña invalidos";
-      }else{
-        if(password_verify($_POST["contrasenia"],$usuario["contrasenia"])==false){
-          $errores["verification"]="Usuario / Contraseña invalidos";
-        }else {
-
-          seteoUsuario($usuario,$_POST);
-          if(validarAcceso()){
-            header("location: usuarios.php");
-            exit;
+          $usuarioEncontrado = $json->buscarPorEmail($usuario->getEmail());
+          if($usuarioEncontrado == null){
+            $errores["email"]="Usuario no existe";
           }else{
-            header("location: login.php");
-            exit;
+            if(Autenticador::verificarPassword($usuario->getPassword(),$usuarioEncontrado["password"] )!=true){
+              $errores["password"]="Error en los datos verifique";
+            }else{
+              Autenticador::seteoSesion($usuarioEncontrado);
+              if(isset($_POST["recordar"])){
+                Autenticador::seteoCookie($usuarioEncontrado);
+              }
+              if(Autenticador::validarUsuario()){
+                redirect("usuarios.php");
+              }else{
+                redirect("signup.php");
+              }
+            }
           }
-
         }
-      }
+    }else{
 
-      }
+        $usuario = new user($_POST["email"],$_POST["password"]);
+        $errores= $validar->validacionLogin($usuario);
+        if(count($errores)==0){
+          $usuarioEncontrado = BaseMYSQL::buscarPorEmail($usuario->getEmail(),$pdo,'users');
+          if($usuarioEncontrado == false){
+            $errores["email"]="Usuario no registrado";
+          }else{
+            if(Autenticador::verificarPassword($usuario->getPassword(),$usuarioEncontrado["password"] )!=true){
+              $errores["password"]="Error en los datos verifique";
+            }else{
+              Autenticador::seteoSesion($usuarioEncontrado);
+              if(isset($_POST["recordar"])){
+                Autenticador::seteoCookie($usuarioEncontrado);
+              }
+              if(Autenticador::validarUsuario()){
+                redirect("usuarios.php");
+              }else{
+                redirect("signup.php");
+              }
+            }
+          }
+        }
+    }
   }
 
- ?>
+
+  /* Esto es lo viejo
+
+    if ($_POST){
+      $validar=validar($_POST, 'login');
+      $errores=$validar['errores'];
+      $persist=$validar['persist'];
+
+      if(count($errores) == 0){
+
+        $usuario = buscarPorEmail($_POST["email"]);
+
+        if($usuario == null){
+          $errores["verification"]= "Usuario / Contraseña invalidos";
+        }else{
+          if(password_verify($_POST["contrasenia"],$usuario["contrasenia"])==false){
+            $errores["verification"]="Usuario / Contraseña invalidos";
+          }else {
+
+            seteoUsuario($usuario,$_POST);
+            if(validarAcceso()){
+              header("location: usuarios.php");
+              exit;
+            }else{
+              header("location: login.php");
+              exit;
+            }
+
+          }
+        }
+
+        }
+    }
+
+   ?>*/
+
+  ?>
+
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -91,9 +152,9 @@
 
           <div class="pregunta-signup">
             <label for="contrasenia">Contraseña *</label>
-            <input id="contrasenia" type="password" name="contrasenia" placeholder="******">
+            <input id="contrasenia" type="password" name="password" placeholder="******">
             <p class="error-for">
-            <?=(isset($errores['contrasenia'])?$errores['contrasenia']: "");?>
+            <?=(isset($errores['password'])?$errores['password']: "");?>
             </p>
           </div>
 

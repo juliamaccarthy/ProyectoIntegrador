@@ -1,5 +1,5 @@
 <?php
-class Season{
+class words{
     private $seasonID;
     private $words;
 

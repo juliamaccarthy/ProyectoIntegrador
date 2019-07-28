@@ -1,24 +1,24 @@
 <?php
 class User{
-    private $nombre;
+    private $name;
     private $email;
     private $surname;
     private $password;
     private $repassword;
     private $escritor;
-    public function __construct($email,$password,$repassword=null, $surname=null, $nombre=null,$escritor=null){
-        $this->nombre = $nombre;
+    public function __construct($email,$password,$repassword=null, $name=null,$escritor=null,$surname=null){
+        $this->name = $name;
         $this->email = $email;
         $this->surname = $surname;
         $this->password = $password;
         $this->repassword = $repassword;
         $this->escritor = $escritor;
     }
-    public function getNombre(){
-        return $this->nombre;
+    public function getName(){
+        return $this->name;
     }
-    public function setNombre($nombre){
-        $this->nombre = $nombre;
+    public function setName($name){
+        $this->name = $name;
     }
     public function getSurname(){
         return $this->surname;
@@ -45,11 +45,11 @@ class User{
         $this->repassword = $repassword;
     }
     public function getEscritor(){
-       return $this->$escritor;
+       return $this->escritor;
     }
     public function setEscritor($escritor){
         $this->escritor = $escritor;
     }
-    
+
 }
 ?>

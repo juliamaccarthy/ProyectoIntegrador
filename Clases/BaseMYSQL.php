@@ -1,8 +1,8 @@
 <?php
 class BaseMYSQL extends BaseDatos{
-    static public function conexion($host,$db_nombre,$usuario,$password,$puerto,$charset){
+    static public function conexion($host,$db_name,$usuario,$password,$puerto,$charset){
         try {
-            $dsn = "mysql:host=".$host.";"."dbname=".$db_nombre.";"."port=".$puerto.";"."charset=".$charset;
+            $dsn = "mysql:host=".$host.";"."dbname=".$db_name.";"."port=".$puerto.";"."charset=".$charset;
             $baseDatos = new PDO($dsn,$usuario,$password);
             $baseDatos->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             return $baseDatos;
@@ -21,13 +21,14 @@ class BaseMYSQL extends BaseDatos{
         $usuario = $query->fetch(PDO::FETCH_ASSOC);
         return $usuario;
     }
-    static public function guardarUsuario($pdo,$usuario,$tabla,$avatar){
-        $sql = "insert into $tabla (name,email,password,avatar,role) values (:name,:email,:password,:avatar,:role )";
+    static public function guardarUsuario($pdo,$usuario,$tabla,$escritor){
+        $sql = "insert into $tabla (name,email,surname,password,escritor,role) values (:name,:email,:surname,:password,:escritor,:role )";
         $query = $pdo->prepare($sql);
-        $query->bindValue(':name',$usuario->getnombre());
+        $query->bindValue(':name',$usuario->getName());
         $query->bindValue(':email',$usuario->getEmail());
+        $query->bindValue(':surname',$usuario->getSurname());
         $query->bindValue(':password',Encriptar::hashPassword($usuario->getPassword()));
-        $query->bindValue(':avatar',$avatar);
+        $query->bindValue(':escritor',$escritor);
         $query->bindValue('role',1);
         $query->execute();
     }
@@ -44,4 +45,4 @@ class BaseMYSQL extends BaseDatos{
     public function guardar($usuario){
         //Este fue el método usao para json
     }
-} 
+}

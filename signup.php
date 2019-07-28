@@ -8,9 +8,10 @@
 
   require_once("autoload.php");
   if ($_POST){
-    $_POST['name']=ucwords(strtolower($_POST['name']);
-    $_POST['surname']=ucwords(strtolower($_POST['surname']);
-    $_POST['email']=(strtolower($_POST['email']);
+
+    $_POST['name']=ucwords(strtolower($_POST['name']));
+    $_POST['surname']=ucwords(strtolower($_POST['surname']));
+    $_POST['email']=(strtolower($_POST['email']));
     //Esta variable es quien controla si se desea guardar en archivo JSON o en MYSQL
     $tipoConexion = "MYSQL";
     // Si la función retorn false, significa que se va a guardar los datos en JSON, de lo contrario se guardará los datos en MYSQL

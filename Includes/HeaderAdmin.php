@@ -29,7 +29,7 @@
 
         <!--Reglas--> <!--TODAVIA NO VA A NINGUN LADO-->
         <li class="nav-item">
-          <a class="nav-link" href="#">Escritos</a>
+          <a class="nav-link" href="escritosAdmin.php">Escritos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Temporadas</a>

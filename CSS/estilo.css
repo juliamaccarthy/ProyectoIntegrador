@@ -512,6 +512,40 @@ i {
 
 }
 
+/*LISTAS*/
+.listados{
+  width: 100%;
+  margin: auto;
+ color: rgb(87,197,164);
+}
+
+.listados tbody td a{
+   color: rgb(87,197,164);
+}
+
+.listados td a:hover{
+  decoration:none;
+}
+ .listados i {
+     color: rgb(87,197,164);
+ }
+.listatitulo{
+  text-align: center;
+  color: rgb(87,197,164);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
+  padding: 10px;
+  margin-top: 20PX;
+  margin-bottom: 20px;
+  letter-spacing: 3PX;
+}
+
+.middle{
+  margin:auto;
+  align-content:center;
+
+}
 
 
 @media (min-width:768px){
@@ -737,6 +771,28 @@ width: 80%;
   height: 10vh;
 }
 
+ /*LISTAS*/
+ .listados{
+   width: 80%;
+   margin: auto;
+  color: rgb(87,197,164);
+ }
+
+  .listados i {
+      color: rgb(87,197,164);
+  }
+ .listatitulo{
+   text-align: center;
+   color: rgb(87,197,164);
+   font-size: 40px;
+   font-weight: bold;
+   font-family: 'Gotham SSm A','Gotham SSm B','Gotham A','Gotham B','Open sans',sans-serif;
+   padding: 10px;
+   margin-top: 20PX;
+   margin-bottom: 20px;
+   letter-spacing: 3PX;
+ }
+
 
 @media (min-width:1200px) {
 
@@ -858,5 +914,48 @@ width: 80%;
   padding-top: 0;
 }
 }
+.EscritoInd{
+  width: 80%;
+
+  margin: auto;
+    margin-top: 7vh;
+}
+
+/*USUARIO INDIVIDUAL*/
+
+.UsuariosIndiv{
+  width: 80%;
+  margin: auto;
+  margin-top: 5vh;
+
+}
+.infousuario{
+  overflow: hidden;
+}
+.infousuario .photo{
+  float: left;
+  width:50%;
+}
+
+.infousuario .photo .fotousuario{
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  width:150px;
+  margin: auto;
+
+}
+
+.UsuariosIndiv .infous{
+  overflow: hidden;
+}
+
+.UsuariosIndiv .info .labelus{
+  float: left;
+}
+
+.UsuariosIndiv .info .outputus{
+  float: right;
+}
+
 
 /*DESKTOP*/

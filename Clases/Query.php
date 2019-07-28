@@ -1,8 +1,8 @@
 <?php
 class Query{
-    static public function listado($pdo,$tabla){
+    static public function listado($pdo,$tabla,$where=null){
         //Aquí ejecuto la consulta deseada, para mostrar algunos campos del usuario
-        $sql="select $tabla.id, $tabla.name, $tabla.email from $tabla";
+        $sql="select * from $tabla $where";
         //Aquí ejecuto el prepare de la sentencia, noten que lo estoy ejecutando de forma directa haciendo uso del método query de la clase PDO, es para que vean que se puede trabajar de diferentes formas
         $consulta= $pdo->query($sql);
         //Aquí ejecuto la consulta que tengo preparada, para así traer todos los usuarios registrados y almacenarlos en la variable $listado, la cual retorno
@@ -11,12 +11,12 @@ class Query{
     }
     static public function mostrarUsuario($pdo,$tabla,$idUsuario){
         //En esta otra consulta hago uso del statement que ofrece PDO
-        $sql = "select $tabla.id, $tabla.name, $tabla.email, $tabla.avatar,$tabla.role from $tabla where $tabla.id = '$idUsuario'";
+        $sql = "select * from $tabla where $tabla.id = '$idUsuario'";
         //Aquí hago el prepare de los datos de mi consulta (Query)
         $query = $pdo->prepare($sql);
         //Aquí ejecuto la consulta
         $query->execute();
-        //Aquí hago uso del método fetchAll, pero también puedo usar sólo el métodp fetch, ya que sólo voy a buscar al usuario que cumpla con la condificón indicada 
+        //Aquí hago uso del método fetchAll, pero también puedo usar sólo el métodp fetch, ya que sólo voy a buscar al usuario que cumpla con la condificón indicada
         $usuarioEncontrado=$query->fetchAll(PDO::FETCH_ASSOC);
         //Retorno el array sólo del usuario encontrado
         return $usuarioEncontrado;

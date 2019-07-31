@@ -957,5 +957,17 @@ width: 80%;
   float: right;
 }
 
+/*User*/
+.Condiciones{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 10px;
+  padding-bottom: 0px;
+  float: left;
+  border-bottom: solid;
+  border-width: 3px;
+  border-color: rgba(87, 197, 164,0.6);
+}
 
 /*DESKTOP*/

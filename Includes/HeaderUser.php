@@ -17,19 +17,19 @@
         <!--HOME-->
 
         <li class="nav-item">
-          <a class="nav-link " href="#">News Feed
+          <a class="nav-link " href="NewsFeed.php">News Feed
             <span class="sr-only">(current) </span>
           </a>
         </li>
 
         <!--NOSOTROS-->
         <li class="nav-item ">
-          <a class="nav-link" href="#">Reglas</a>
+          <a class="nav-link" href="Condiciones.php">Reglas</a>
         </li>
 
         <!--Reglas--> <!--TODAVIA NO VA A NINGUN LADO-->
         <li class="nav-item">
-          <a class="nav-link" href="#">Mis Escritos</a>
+          <a class="nav-link" href="MisEscritos.php">Mis Escritos</a>
         </li>
 
         <!-- DROPDOWN QUE NO VAMOSA  USAR AHORA

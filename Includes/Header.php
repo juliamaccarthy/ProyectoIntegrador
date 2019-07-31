@@ -40,6 +40,7 @@
           } ?> " href="Reglas.php">Preguntas Frecuentes</a>
         </li>
 
+
         <!-- DROPDOWN QUE NO VAMOSA  USAR AHORA
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

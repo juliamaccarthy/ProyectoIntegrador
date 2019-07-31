@@ -10,7 +10,7 @@
   if ($_POST){
 
     $_POST['name']=ucwords(strtolower($_POST['name']));
-    $_POST['surname']=ucwords(strtolower($_POST['surname']));
+    $_POST['apellido']=ucwords(strtolower($_POST['apellido']));
     $_POST['email']=(strtolower($_POST['email']));
     //Esta variable es quien controla si se desea guardar en archivo JSON o en MYSQL
     $tipoConexion = "MYSQL";

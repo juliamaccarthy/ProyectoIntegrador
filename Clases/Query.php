@@ -9,6 +9,15 @@ class Query{
         $listado=$consulta->fetchall(PDO::FETCH_ASSOC);
         return $listado;
     }
+    static public function Consulta1($pdo, $select){
+        //Aquí ejecuto la consulta deseada, para mostrar algunos campos del usuario
+        $sql="$select";
+        //Aquí ejecuto el prepare de la sentencia, noten que lo estoy ejecutando de forma directa haciendo uso del método query de la clase PDO, es para que vean que se puede trabajar de diferentes formas
+        $consulta= $pdo->query($sql);
+        //Aquí ejecuto la consulta que tengo preparada, para así traer todos los usuarios registrados y almacenarlos en la variable $listado, la cual retorno
+        $listado=$consulta->fetchall(PDO::FETCH_ASSOC);
+        return $listado;
+    }
     static public function mostrarUsuario($pdo,$tabla,$idUsuario){
         //En esta otra consulta hago uso del statement que ofrece PDO
         $sql = "select * from $tabla where $tabla.id = '$idUsuario'";

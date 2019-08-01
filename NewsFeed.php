@@ -2,8 +2,13 @@
 <?php
   $filename="NewsFeed.php";
   require_once("autoload.php");
-    if(!isset($_SESSION["email"]) && $_SESSION['role']!=1 ){
+    if(!isset($_SESSION["email"])){
       redirect("signup.php");}
+    $select="Select * from writtings order by likes desc";
+      $infousuario= Query::Consulta1($pdo,$select);
+      var_dump($infousuario);
+
+
  ?>
 <html lang="en" dir="ltr">
   <head>

@@ -547,6 +547,27 @@ i {
 
 }
 
+.title-me {
+ color: rgb(87, 197, 164);
+ font-family: courier-std, monospace;
+ font-weight: 400;
+ font-style: italic;
+ font-size: 2em;
+}
+.likes-me i  {
+   color: rgb(87,197,164);
+   font-size: 15px;
+   margin-left: 0;
+}
+.likes-me {
+ text-align: right;
+ font-size: 15px;
+ color: rgb(87,197,164);
+}
+.fondo-escrito {
+ background-color: rgba(87,197,164, 0.2);
+}
+
 
 @media (min-width:768px){
 

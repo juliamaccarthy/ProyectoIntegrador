@@ -18,6 +18,7 @@
 
 
 
+
  ?>
 <html lang="en" dir="ltr">
   <head>
@@ -35,19 +36,27 @@
         <?php include("Includes/HeaderUser.php"); ?>
 
         <?php foreach ($infousuario as $key => $value):?>
-        <section class="MisEscritos/home">
+          <div class="EscritoInd">
 
-          <div class="row">
-
-          <div class="col-sm-12 col-lg-12 MisEscritos/Home">
-            <div class="MisEscritos/Home">
-              <p class="home-title"> <?=$value["title"];?> </p>
-              <p class="home-subtitle"><?=$value["subtitle"];?>  </p>
-              <p class="home-body"><?=$value["body"];?>  </p>
-            </div>
-          </div>
-        </div>
-        </section>
+            <h2 class="title-me">
+                "<?= strtoupper($value["title"]);?>"
+              </h2>
+            <h2 class='subtitle'>
+              <?=$value["subtitle"];?>
+     </h2>
+     <h6 class="escritor">
+       <?= $value["name"] . " " . $value["surname"];;?>
+     </h6>
+     <div class="fondo-escrito">
+     <p class="body">
+           <?= $value["body"]; ;?>
+     </p>
+   </div>
+     <p class="likes-me">
+         <strong><?= $value["likes"];?> </strong>
+           <i class="fas fa-thumbs-up"></i>
+     </p>
+   </div>
           <?php endforeach;?>
 
       </body>

@@ -17,7 +17,7 @@
 
     <div class="pregsfreq">
 
-      <h3 class=home-title> Condiciones de Juego  </h3>
+      <h3 class="home-title"> Condiciones de Juego </h3>
       <br>
 
       <article class= condiciones_2>
@@ -90,7 +90,7 @@ Importante: ¡Contácta a tu compañero lo más rápido posible! No esperes que 
     <br>
     <br>
     </article>
-
+</div>
 <?php include("Includes/Footer.php") ?>
 <?php include("Includes/jquerys.php") ?>
 </body>

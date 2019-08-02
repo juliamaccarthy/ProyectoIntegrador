@@ -264,6 +264,7 @@ li.nav-item a.login:hover{
   font-weight: bold;
   text-decoration: none;
 }
+
 /*Nosotros*/
 
 .nosotros-body{
@@ -432,7 +433,6 @@ i {
   border-color:rgb(87,197,164);
 }
 
-
 .signup-login ul li a {
   color: rgb(87,197,164);
 
@@ -567,7 +567,6 @@ i {
 .fondo-escrito {
  background-color: rgba(87,197,164, 0.2);
 }
-
 
 @media (min-width:768px){
 

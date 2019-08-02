@@ -18,8 +18,8 @@ require_once("clases/writtings.php");
 $host = "localhost";
 $bd = "escribeconmigo";
 $usuario = "root";
-$password = "";
-$puerto = "3306";
+$password = "root";
+$puerto = "8888";
 $charset = "utf8mb4";
 //Ojo: Para los que trabajan con MAC: deben colocar el puerto: 8889
 
